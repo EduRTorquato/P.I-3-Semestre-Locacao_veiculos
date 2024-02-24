@@ -1,0 +1,71 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    background-color: #FFFF;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* FINDER VEÍCULOS */
+#finder{
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+}
+
+.titulo {
+    color: var(--corBase);
+}
+
+.background {
+    background-color: var(--corFundo);
+}
+
+.links {
+
+}
+
+.logout {
+    cursor: pointer;
+}
+
+.nav-itens {
+    display: flex;
+}
+
+.nav-itens>li {
+    padding-left: 60px;
+}
+
+
+
+/* FOOTER */
+
+footer{
+    background-color:var(--corBase);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+}
+
+.secoes{
+    max-width: 100%;
+    margin: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.informacoes{
+    display: flex;
+    padding: 100px;
+}
+
+.info1, .info2, .info3 {
+    padding-top: 0px 100px;
+    font-size: 14px;
+
+}
