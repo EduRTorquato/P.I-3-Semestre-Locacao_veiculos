@@ -8,3 +8,14 @@ html {
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }
+
+li {
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+li:hover {
+    cursor: pointer;
+    color:var(--corBase);
+    border-style: none;
+}

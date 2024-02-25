@@ -8,12 +8,7 @@ nav {
     margin-bottom: 10px;
 }
 
-/* FINDER VEÍCULOS */
-#finder{
-    display: flex;
-    justify-content: center;
-    background-color: orange;
-}
+
 
 .titulo {
     color: var(--corBase);
@@ -23,9 +18,7 @@ nav {
     background-color: var(--corFundo);
 }
 
-.links {
-
-}
+.links {}
 
 .logout {
     cursor: pointer;
@@ -35,6 +28,7 @@ nav {
     display: flex;
 }
 
+
 .nav-itens>li {
     padding-left: 60px;
 }
@@ -43,29 +37,81 @@ nav {
 
 /* FOOTER */
 
-footer{
-    background-color:var(--corBase);
+footer {
+    background-color: var(--corBase);
     color: white;
     position: fixed;
     bottom: 0;
-    height: 200px;
+    height: 100px;
     width: 100%;
+
 }
 
-.secoes{
+.secoes {
     max-width: 100%;
     margin: auto;
     padding-left: 100px;
     padding-right: 100px;
 }
 
-.informacoes{
+.informacoes {
     display: flex;
     padding: 100px;
 }
 
-.info1, .info2, .info3 {
+.info1,
+.info2,
+.info3 {
     padding-top: 0px 100px;
     font-size: 14px;
 
+}
+
+
+/* FINDER VEÍCULOS */
+#finder {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+#box {
+    background-color: white;
+    width: 600px;
+    height: 200px;
+    border-radius: 10px;
+
+}
+
+.nav-itensBox {
+    display: flex;
+    margin: 10px;
+    justify-content: left;
+    padding: 8px;
+}
+
+#bar {
+    background-color: var(--corBase);
+    height: 2px;
+    border-style: none;
+}
+
+
+
+/* EXIBIR VEÍCULOS */
+.container {
+    margin-top: 20px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto; 
+    padding: 10px;
+    column-gap: 50px;
+}
+
+.container>img {
+    background-color: white;
+    border: 1px;
+    margin: 10px;
+    width: 300px;
+    border-radius: 10px;
 }
