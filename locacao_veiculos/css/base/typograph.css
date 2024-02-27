@@ -1,14 +1,12 @@
 nav {
     display: flex;
     justify-content: space-around;
+    color: white;
     align-items: center;
-    background-color: #FFFF;
+    background-color: var(--contrasteFundo);
     height: 100px;
-    margin-bottom: 10px;
     width: 100%;
 }
-
-
 
 .titulo {
     color: var(--corBase);
@@ -31,12 +29,22 @@ nav {
     padding-left: 60px;
 }
 
+.redBar{
+    background-color: var(--corBase);
+    height: 30px;
+    border-style: none;
+    margin: 0;
+}
+
+#user{
+    height: 50px;
+}
+
 
 
 /* FOOTER */
-
 footer {
-    background-color: var(--corBase);
+    background-color: var(--contrasteFundo);
     color: white;
     bottom: 0;
     height: 10%;
@@ -124,9 +132,6 @@ footer {
 }
 
 
-
-
-
 /* EXIBIR VEÍCULOS */
 .container {
     margin-top: 20px;
@@ -137,7 +142,7 @@ footer {
     column-gap: 50px;
 }
 
-.container>div>img {
+.container>div>.imgCard {
     background-color: white;
     border: 1px;
     margin: 10px;
@@ -174,6 +179,26 @@ footer {
 .card> p{
   margin: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

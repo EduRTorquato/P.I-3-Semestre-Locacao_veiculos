@@ -1,5 +1,6 @@
 :root {
-    --corBase: #6099EF;
+    --corBase: #E21C41;
     --corFundo: #EAEAEA;
-    --hover: #2464c4;
+    --contrasteFundo: #2E2D37;
+    --hover: #a1001e;
 }
