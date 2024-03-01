@@ -29,14 +29,14 @@ nav {
     padding-left: 60px;
 }
 
-.redBar{
+.redBar {
     background-color: var(--corBase);
     height: 30px;
     border-style: none;
     margin: 0;
 }
 
-#user{
+#user {
     height: 50px;
 }
 
@@ -49,7 +49,7 @@ footer {
     bottom: 0;
     height: 10%;
     width: 100%;
-    bottom:0;
+    bottom: 0;
 }
 
 .secoes {
@@ -78,12 +78,15 @@ footer {
     margin-top: 60px;
     display: flex;
     justify-content: center;
+    position: absolute;
+    left: 30%;
+    top: 35.5%;
 }
 
 #box {
     background-color: white;
-    width: 600px;
-    height: 180px;
+    width: 800px;
+    height: 150px;
     border-radius: 10px;
 
 }
@@ -101,13 +104,13 @@ footer {
     border-style: none;
 }
 
-#pesquisa{
+#pesquisa {
     display: flex;
     justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
-#pesquisa > input{
+#pesquisa>input {
     width: 400px;
     height: 30px;
     border-radius: 8px;
@@ -116,7 +119,7 @@ footer {
     font-size: 20px;
 }
 
-#pesquisa > button{
+#pesquisa>button {
     width: 100px;
     border-radius: 10px;
     font-size: 1rem;
@@ -127,28 +130,55 @@ footer {
     transition-duration: 0.2s;
 }
 
-#pesquisa > button:hover{
+#pesquisa>button:hover {
     background-color: var(--hover);
 }
 
 
 /* EXIBIR VEÍCULOS */
+
 .container {
-    margin-top: 20px;
     justify-content: center;
     display: grid;
     grid-template-columns: auto auto auto auto;
     padding: 10px;
     column-gap: 50px;
+    margin: 10%;
 }
 
-.container>div>.imgCard {
-    background-color: white;
-    border: 1px;
-    margin: 10px;
+.card {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 400px;
     width: 300px;
+    border-radius: 20px;
+    background-color: #2E2D37;
+    color: white;
+    margin: 20px;
+}
+
+
+.container>div>.imgCard {
+    height: 250px;
+    width: 360px;
     border-radius: 10px;
     align-items: center;
+    transition: 0.1s;
+    margin-bottom: 150px;
+}
+
+#textCard {
+    margin-top: 100%;
+    color: red;
+}
+
+
+.container>div>.imgCard:hover {
+    width: 500px;
+    height: 350px;
+    cursor: pointer;
 }
 
 
@@ -170,27 +200,11 @@ footer {
     width: 260px;
 }
 
-.card{
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px
+
+
+.card>p {
+    margin: 10px;
 }
-
-.card> p{
-  margin: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -222,7 +236,7 @@ footer {
         border-radius: 10px;
     }
 
-    #pesquisa > input{
+    #pesquisa>input {
         width: 250px;
         height: 30px;
         border-radius: 8px;
@@ -234,26 +248,26 @@ footer {
     nav {
         width: 100%;
     }
-    
+
 }
 
-    @media screen and (max-width: 800px) {
-        .container {
-            margin-top: 20px;
-            justify-content: center;
-            display: grid;
-            grid-template-columns: auto;
-            padding: 10px;
-            column-gap: 50px;
-        }
-
-        #pesquisa > input{
-            width: 250px;
-            height: 30px;
-            border-radius: 8px;
-            border-style: none;
-            background-color: var(--corFundo);
-            font-size: 20px;
-        }
-    
+@media screen and (max-width: 800px) {
+    .container {
+        margin-top: 20px;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: auto;
+        padding: 10px;
+        column-gap: 50px;
     }
+
+    #pesquisa>input {
+        width: 250px;
+        height: 30px;
+        border-radius: 8px;
+        border-style: none;
+        background-color: var(--corFundo);
+        font-size: 20px;
+    }
+
+}
