@@ -157,29 +157,78 @@ footer {
     background-color: #2E2D37;
     color: white;
     margin: 20px;
+    position: relative;
 }
 
 
 .container>div>.imgCard {
+
+    position: absolute;
+    top: 0;
     height: 250px;
-    width: 360px;
+    width: 400px;
+    border-radius: 10px;
+    align-items: center;
+    transition: 0.1s;
+    margin-bottom: 150px;
+
+}
+
+.container>div>.imgCard:hover {
+    height:270px;
+    width: 450px;
+    cursor: pointer;
+}
+
+
+.legend {
+    margin-top: 28px;
+    position: absolute;
+    top: 0;
+    height: 250px;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 150px;
+
+}
+
+.line {
+    margin-top: 50px;
+}
+
+
+
+
+.price {
+
+    margin-top: 30px;
+    height: 100px;
+    width: 400px;
+    border-radius: 10px;
+    align-items: center;
+    transition: 0.1s;
+    margin-bottom: 150px;
+    color: rgb(255, 255, 255);
+}
+
+
+#textCard {
+    margin-top: 80%;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    height: 350px;
+    width: 450px;
     border-radius: 10px;
     align-items: center;
     transition: 0.1s;
     margin-bottom: 150px;
 }
 
-#textCard {
-    margin-top: 100%;
-    color: red;
-}
 
 
-.container>div>.imgCard:hover {
-    width: 500px;
-    height: 350px;
-    cursor: pointer;
-}
 
 
 #divBusca {
