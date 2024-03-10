@@ -16,7 +16,7 @@
     justify-content: center;
     position: absolute;
     left: 35%;
-    top: 34.6%;
+    top: 34.1%;
 }
 
 #box {
@@ -48,10 +48,10 @@
 #pesquisa>input {
     width: 400px;
     height: 30px;
-    border-radius: 8px;
+    border-radius: 5px;
     border-style: none;
     background-color: var(--corFundo);
-    font-size: 20px;
+    font-size: 15px;
 }
 
 #pesquisa>button {
@@ -69,10 +69,13 @@
     background-color: var(--hover);
 }
 
+.acordion{
+    border: 1px solid black;
+}
+
 
 /* EXIBIR VEÍCULOS */
 .container {
-    justify-content: center;
     display: grid;
     grid-template-columns: auto auto auto auto;
     padding: 10px;
@@ -117,7 +120,7 @@
 
 .legend {
     position: absolute;
-    margin-top: 20px;
+    margin-top: 23px;
     left: 20%;
     width: 275px;
     font-size: 10px;
@@ -125,6 +128,7 @@
 
 .line {
     left: 28%;
+    top: 3%;
     position: absolute;
 }
 
@@ -182,7 +186,7 @@ footer {
 @media screen and (max-width: 1200px) {
     .container {
         margin-top: 120px;
-        justify-content: center;
+      
         display: grid;
         grid-template-columns: auto auto;
         padding: 10px;
@@ -210,7 +214,7 @@ footer {
         justify-content: center;
         position: absolute;
         left: 30%;
-        top: 22%;
+        top: 26.5%;
     }
 
     nav {
