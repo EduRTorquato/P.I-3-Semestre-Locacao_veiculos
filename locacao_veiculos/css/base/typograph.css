@@ -15,9 +15,15 @@ nav {
     display: flex;
 }
 
-.nav-itens>li {
-    padding-left: 60px;
+.links {
+    padding-right: 190px;
 }
+
+.nav-itens>li {
+    padding-left: 100px;
+}
+
+
 
 #user {
     height: 50px;

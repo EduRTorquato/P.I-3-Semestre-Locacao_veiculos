@@ -9,6 +9,11 @@
     width: 100%;
 }
 
+#imgLogo{
+    width: 90px;
+    height: 90px;
+}
+
 /* FINDER VEÍCULOS */
 #finder {
     margin-top: 76px;
@@ -16,7 +21,7 @@
     justify-content: center;
     position: absolute;
     left: 35%;
-    top: 34.1%;
+    top: 32.2%;
 }
 
 #box {
@@ -94,14 +99,13 @@
     background-color: #2E2D37;
     color: white;
     margin: 20px;
-    position: relative;
     cursor: pointer;
 }
 
 
 .container>div>.imgCard {
 
-    position: absolute;
+    
     top: 0;
     height: 250px;
     width: 400px;

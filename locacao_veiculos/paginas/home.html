@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/locacao_veiculos/css/styles.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../img/logos/katchauRed.png">
     <title>Home</title>
 </head>
 
@@ -13,13 +14,17 @@
 
     <!-- NAVBAR  -->
     <nav>
-        <div class="logo"> Logo</div>
+        <div class="logo"> 
+            
+            <img id="imgLogo" src="../img/logos/katchauRed.png" alt="">
+
+        </div>
         <div class="links">
             <ul class="nav-itens">
-                <li>Comprar</li>
-                <li>Alugar</li>
-                <li>Serviços</li>
-                <li>Ajuda</li>
+                <li id="id_comprar">Comprar</li>
+                <li id="id_alugar">Alugar</li>
+                <li id="id_servicos">Serviços</li>
+                <li id="id_ajuda">Ajuda</li>
             </ul>
         </div>
         <div>
@@ -29,7 +34,26 @@
 
     <hr class="redBar">
 
-    <img id="imgBanner" src="../img/carro-banner.png" alt="">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="1000">
+            <img src="../img/carroussel/audiBGhome.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img src="../img/carroussel/carro-banner.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img src="../img/carroussel/fiatBGhome.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img src="../img/carroussel/hyundaiBGhome.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="1000">
+            <img src="../img/carroussel/MicrosoftTeams-image.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+
 
     <!-- BUSCADOR DE VEÍCULOS -->
     <div id="finder">
@@ -55,7 +79,7 @@
 
 
         <div class="card" href="./detalhes.html">
-            <img class="imgCard" src="../img/demo/h20.png" alt="">
+            <img id="id_imagem" class="imgCard" src="../img/demo/h20.png" alt="">
 
             <div id="textCard">
                 <h1>CARRO</h1>
@@ -72,7 +96,7 @@
 
 
         <div class="card">
-            <img class="imgCard" src="../img/demo/acura.png" alt="">
+            <img id="id_imagem" class="imgCard" src="../img/demo/acura.png" alt="">
 
             <div id="textCard">
                 <h1>CARRO</h1>
@@ -87,7 +111,7 @@
         </div>
 
         <div class="card">
-            <img class="imgCard" src="../img/demo/acura.png" alt="">
+            <img id="id_imagem" class="imgCard" src="../img/demo/acura.png" alt="">
 
             <div id="textCard">
                 <h1>CARRO</h1>
@@ -102,7 +126,7 @@
         </div>
 
         <div class="card">
-            <img class="imgCard" src="../img/demo/h20.png" alt="">
+            <img id="id_imagem" class="imgCard" src="../img/demo/h20.png" alt="">
 
             <div id="textCard">
                 <h1>CARRO</h1>
@@ -117,7 +141,7 @@
         </div>
 
         <div class="card">
-            <img class="imgCard" src="../img/demo/h20.png" alt="">
+            <img id="id_imagem" class="imgCard" src="../img/demo/h20.png" alt="">
 
             <div id="textCard">
                 <h1>CARRO</h1>
@@ -133,7 +157,7 @@
 
 
         <div class="card">
-            <img class="imgCard" src="../img/demo/acura.png" alt="">
+            <img id="id_imagem" class="imgCard" src="../img/demo/acura.png" alt="">
 
             <div id="textCard">
                 <h1>CARRO</h1>
@@ -216,6 +240,7 @@
     </div>
 
     <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/index.js"></script>
 
 </body>
 
