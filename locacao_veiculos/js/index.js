@@ -10,7 +10,7 @@
 
 
 
-
+const finalizaCadastro = document.getElementById('finalizaCadastro');
 
 const idImg = document.getElementById('id_imagem');
 
@@ -25,6 +25,12 @@ const idAjuda = document.getElementById('id_ajuda');
 idImg.addEventListener('click', function(){
     window.location.pathname="/locacao_veiculos/paginas/detalhes.html";
 } )
+
+finalizaCadastro.addEventListener('click', function(){
+    console.log('FUNCIONANDO')
+    window.location.pathname="/locacao_veiculos/paginas/home.html";
+} )
+
 
 idCompra.addEventListener('click', function(){
     console.log('COMPRAR')

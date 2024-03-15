@@ -1,0 +1,58 @@
+body{
+justify-content: space-around;
+
+
+
+}
+.imageFamily{
+
+   
+   width: 1270px;
+   height: 1100px;
+   position: absolute;
+   margin-top: -280px;
+  
+}
+
+.container {
+    display: flex;
+    
+  }
+  
+  .conteudo {
+    margin-right: -250px;
+    margin-bottom: auto;
+    margin-left: auto;
+    position: relative;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size:  30px;
+    margin-top: -50px;
+  }
+
+  .campos{
+    height: 100px;
+    margin: 260px;
+    margin-left: 1390px;
+    position: relative;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size:  20px;
+    color: grey;
+  }
+
+  .senha{
+   margin-top: 20px;
+  }
+
+.checkBox{
+    margin: 20px;
+    height: 80px;
+}
+
+.enviar{
+    margin: 50px;
+}
+
+.cadastro{
+    margin: 20px;
+    
+}
