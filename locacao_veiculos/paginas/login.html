@@ -2,16 +2,38 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="icon" href="../img/logos/katchauRed.png">
-    <title>Login</title>
+    <title>Area de login em HTML e CSS</title>
+    <link rel="stylesheet" href="../css/base/login.css">
+    <link rel="icon" href="img/login.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
+    <div class="wrapper">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Usuario" required >
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Senha" required >
+                <i class='bx bxs-lock-alt'></i>
+            </div>
 
-    <button type="button" class="btn btn-primary">Primary</button>
+            <div class="remenber-forgot">
+                <label><input type="checkbox">lembrar de mim</label>
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" class="bnt">Entrar</button>
+
+            <div class="register-link"></div>
+            <p>Não tem uma conta ainda? <a href="#">Registro</a></p>
+        </form>
+    </div>
 
 
 </body>
