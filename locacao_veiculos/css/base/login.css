@@ -8,6 +8,8 @@
 }
 
 .loginScreen {
+    height: auto;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,10 +119,10 @@
 .register-link p a:hover {
     text-decoration: underline;
 }.imgPersonagem {
-    width: 100%;
-    max-width: 1000px;
-    position: absolute;
-    left: 0;
+    height: -1px;
+    width: 60%;
+    max-width: 700px;
+    position: relative;
     bottom: -3.5%;
 }
 
@@ -141,10 +143,34 @@
     }
 
     .imgPersonagem {
+        height: auto;
         width: 100%;
         max-width: 450px;
+        align-items: center;
+        
     }
 }
+@media screen and (max-width: 800px) {
+    .loginScreen {
+        background-image: url('../../img/telaLogin.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
+    .wrapper {
+        padding: 20px 30px;
+        width: 100%;
+        position: relative;
+        max-width: auto;
+    }
+
+    .imgPersonagem {
+        height: 200px;
+        width: 60%;
+        max-width: 450px;
+        align-items: center;
+    }
+}
 
 /* Media query
