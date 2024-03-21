@@ -118,12 +118,15 @@
 
 .register-link p a:hover {
     text-decoration: underline;
-}.imgPersonagem {
+}
+
+.imgPersonagem {
     height: -1px;
-    width: 60%;
+    width: 550px;
     max-width: 700px;
-    position: relative;
-    bottom: -3.5%;
+    position: absolute;
+    left: 5%;
+    bottom: 0%;
 }
 
 /* Media query for screens smaller than 768px */
@@ -147,6 +150,7 @@
         width: 100%;
         max-width: 450px;
         align-items: center;
+        position: absolute;
         
     }
 }
