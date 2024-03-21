@@ -11,7 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background:url(img/bbb.png) no-repeat center ;
+    background-image: url(telaLogin.png);
     background-color: center;
 }
 .wrapper {
