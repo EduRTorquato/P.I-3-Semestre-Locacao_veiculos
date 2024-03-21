@@ -1,77 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>Document</title>
-
-
-
-    
-
-
-
-
+  <meta charset="UTF-8" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" href="../img/logos/katchauRed.png">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Login</title>
 </head>
-<body>
-    
-        <img class="imageFamily" src="../img/full-shot-family-traveling-together.jpg">
-   
 
-    
+<body class="cadastroScreen">
 
-    <div class="campos">
+  <img src="..//img/iconCadastro.png" class="imgCadastro" alt="">
 
-        <form>
+  <div class="wrapperCadastro">
 
+    <form action="formCad " class="formCadastro">
 
-            <h1 class="cadastro">CADASTRO</h1>
+      <h1 class="cadastroTitle">Cadastro</h1>
 
-            <div class="email">
-
-              <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            
-            </div>
+      <div class="input-box">
+        <input type="text" placeholder="Nome" required>
+        <i class=''></i>
 
 
-            <div class="senha">
-              <label for="exampleInputPassword1" class="form-label">Senha</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
+      </div>
+      <div class="input-cadastro">
+        <input type="number" placeholder="CPF" required>
+      </div>
 
-            <div class="Nome">
-                <label for="exampleInputPassword1" class="form-label">Nome Completo</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-              </div>
+      <div class="input-cadastro">
+        <input type="text" placeholder="E-mail" required>
+      </div>
 
+      <div class="input-cadastro">
+        <input type="password" placeholder="Senha" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
 
-              <div class="CPF">
-                <label for="exampleInputPassword1" class="form-label">CPF</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-              </div>
+      <div class="input-cadastro">
+        <input class="calendario" type="date" placeholder="E-mail" required>
+        <i class='bx bxs-calendar-alt'></i>
+      </div>
 
+      <div class="remenber-cadastro">
+        <label><input type="checkbox">Concrodo que meus dados estão corretos</label>
+      </div>
 
-            <div class="checkBox">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Concordo que Meus Dados Estão Corretos</label>
-            </div>
+      
+      <button type="submit" class="bntCadastro">Criar Conta</button>
 
+    </form>
+  </div>
 
-            <button type="enviar" id="finalizaCadastro" class="btn btn-primary">Enviar Dados</button>
-
-
-          </form>
-
-
-        
-
-
-    </div>
-    
-
-    <script href="../js/index.js"></script>
-    
 </body>
+
 </html>

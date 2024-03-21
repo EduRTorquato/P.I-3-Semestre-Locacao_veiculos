@@ -1,50 +1,201 @@
-.imageFamily {
-  width: 1270px;
-  height: 1100px;
-  position: absolute;
-  margin-top: -280px;
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.cadastroScreen {
+  
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('../../img/telaLogin.png');
+    position: relative;
+}
+
+.wrapperCadastro {
+  
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--corBase);
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(10, 10, 10, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin-bottom: 120px;
+    position: relative;
+    z-index: 1;
+}
+
+.wrapperCadastro h1 {
+
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapperCadastro .input-cadastro {
+  
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-cadastro input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-cadastro input::placeholder {
+    color: #fff;
+}
+
+.input-cadastro i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapperCadastro .remenber-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remenber-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remenber-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remenber-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapperCadastro .bntCadastro {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapperCadastro .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+.imgCadastro {
+    height: -1px;
+    width: 900px;
+    max-width: 900px;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+}
+
+
+.bntCadastro{
+  margin-top: 30px;
+  
+}
+
+.cadastroTitle{
+  margin-bottom: 30px;
+  font-family: Gill Sans;
 
 }
 
-.container {
-  display: flex;
 
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 450px) {
+    .cadastroScreen {
+        background-image: url('../../img/telaLogin.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .wrapperCadastro {
+        padding: 20px 30px;
+        width: 100%;
+        position: relative;
+        max-width: auto;
+    }
+
+    .imgPersonagem {
+        height: auto;
+        width: 100%;
+        max-width: 450px;
+        align-items: center;
+        position: absolute;
+        
+    }
+}
+@media screen and (max-width: 800px) {
+    .cadastroScreen {
+        background-image: url('../../img/telaLogin.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .wrapperCadastro {
+        padding: 20px 30px;
+        width: 100%;
+        position: relative;
+        max-width: auto;
+    }
+
+    .imgPersonagem {
+        height: 200px;
+        width: 60%;
+        max-width: 450px;
+        align-items: center;
+    }
 }
 
-.conteudo {
-  margin-right: -250px;
-  margin-bottom: auto;
-  margin-left: auto;
-  position: relative;
-  font-family: 'Arial Narrow Bold', sans-serif;
-  font-size: 30px;
-  margin-top: -50px;
-}
+/* Media query*/
 
-.campos {
-  height: 100px;
-  margin: 260px;
-  margin-left: 1390px;
-  position: relative;
-  font-family: 'Arial Narrow Bold', sans-serif;
-  font-size: 20px;
-  color: grey;
-}
 
-.senha {
-  margin-top: 20px;
-}
 
-.checkBox {
-  margin: 20px;
-  height: 80px;
-}
 
-.enviar {
-  margin: 50px;
-}
-
-.cadastro {
-  margin: 20px;
-
-}
