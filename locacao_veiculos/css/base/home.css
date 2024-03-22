@@ -175,16 +175,29 @@ footer {
 }
 
 .informacoes {
-    display: flex;
-    padding: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 200px;
+    position: relative;
 }
 
 .info1,
 .info2,
 .info3 {
-    padding-top: 0px 100px;
+
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     font-size: 14px;
 
+}
+
+.logoFooter{
+    width: 60px;
+    top: 75%;
+    position: absolute;
+    left: 50%;
 }
 
 

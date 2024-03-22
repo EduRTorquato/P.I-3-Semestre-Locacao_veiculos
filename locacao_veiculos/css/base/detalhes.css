@@ -1,5 +1,11 @@
-.backCarroussel{
+
+
+
+
+.detailBody{
+  
     position: relative;
+
 }
 
 .infoDetalhes{
@@ -8,10 +14,11 @@
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-    top: 40%;
+
+    top: 120%;
     left: 15%;
     width: 800px;
-    height: 600px;
+    height: 750px
 }
 
 
@@ -21,9 +28,9 @@
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-    width: 300px;
+    width: 400px;
     height: 400px;
-    top: 40%;
+    top: 120%;
     left: 65%;
 }
 
@@ -49,4 +56,20 @@
     font-size: 40px;
     font-weight: 700;
     color: var(--corBase);
+}
+
+
+.informacoesDetalhes{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: 500px;
+    position: ab;
+}
+
+.footerBar{
+
+    bottom: -1000px;
+    position: absolute;
+    height: 200px;
 }
