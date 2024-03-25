@@ -15,7 +15,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  
+  background-image: url(/locacao_veiculos/img/telaLogin.png);
   position: relative;
 }
 
