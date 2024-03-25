@@ -48,5 +48,23 @@ idServicos.addEventListener('click', function(){
    console.log('SERVICOS')
 } )
 
+const backButton = document.querySelector('.back-button');
+const root = document.documentElement;
+
+backButton.addEventListener('click', function() {
+    root.scrollTo({top: 0, behavior: 'smooth'});
+    console.log('voltando')
+    window.location.pathname="/locacao_veiculos/paginas/home.html";
+});
+window.addEventListener('scroll', () => {
+   if(window.pageYOffset > 100) {
+       backButton.classList.add('show-button');
+   } else {
+       backButton.classList.remove('show-button');
+   }
+});
+
+
+
 
 
