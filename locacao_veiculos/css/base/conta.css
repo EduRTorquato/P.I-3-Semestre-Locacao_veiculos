@@ -1,11 +1,46 @@
-.sidebar-sticky{
-  margin-top: 200px;
-  text-align:center
-
+.backgroundConta {
+ background-color: var(--corFundo);
 }
 
+.sidebar-sticky {
+  margin-top: 200px;
+  text-align: center
+}
 
-.fotoFundo{
-  height: 300px;
-  width: 350px;
+.sideBar {
+  background-color: #fff;
+  width: 300px;
+  height: 865px;
+  position: relative;
+}
+
+.imgPerfil {
+  width: 100px;
+  height: 100px;
+  left: 6.5%;
+  top: 15%;
+  position: fixed;
+}
+
+.emailInfo {
+  opacity: 50%;
+}
+
+.infoProfile{
+  padding-top: 45px;
+  text-align: center;
+}
+
+.fotoFundo {
+  height: 200px;
+  width: 300px;
+  opacity: 50%;
+}
+
+.sidebar {
+  color: #fff;
+  background-color: white;
+  background-image: url(../img/telaLogin.png);
+  width: 300px;
+  height: 100vh;
 }
