@@ -5,4 +5,6 @@ Repositório para guardar arquivos referentes ao projeto Integrador do 3º Semes
 
 
 Devs:
-
+Eduardo Torquato
+Roberto Belchior
+Vinícius Ferreira de Paula

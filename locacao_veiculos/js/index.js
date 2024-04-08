@@ -64,6 +64,12 @@ window.addEventListener('scroll', () => {
    }
 });
 
+idCriarConta.addEventListener('click', function(){
+    console.log('Criar')
+    window.location.pathname="/locacao_veiculos"
+ } )
+ 
+
 
 
 

@@ -14,7 +14,7 @@
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-
+    margin-top: 600px; /* mexer aqui para ajustar depois a altura*/
     top: 120%;
     left: 15%;
     width: 800px;
@@ -23,7 +23,8 @@
 
 
 .infoPreco{
-    position: absolute;
+
+    margin-top: 600px; /* mexer aqui para ajustar depois a altura*/    position: absolute;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -88,7 +89,21 @@
 
 .footerBar{
 
+    justify-content: end;
+    margin-block: -800px;
     bottom: -1000px;
     position: absolute;
     height: 200px;
+}
+
+.carouselDetalhes{
+    
+    
+    width: 950px;
+    margin-top: -1600px;
+    position: absolute;
+    display: block;
+    justify-content: center;
+    margin-left: 50vh;
+    
 }
