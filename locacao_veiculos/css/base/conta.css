@@ -79,3 +79,15 @@
   position: ab;
   justify-content: space-evenly;
 }
+
+.columnData {
+  margin: 50px;
+}
+
+.columnAddress{
+  margin: 50px;
+}
+.titles{
+  color: var(--corBase);
+  margin: 30px;
+}
