@@ -11,27 +11,27 @@
 .infoDetalhes{
     position: absolute;
     background-color: rgb(255, 255, 255);
-    border-radius: 20px;
+    border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-    margin-top: 600px; /* mexer aqui para ajustar depois a altura*/
-    top: 120%;
+    top: 90%;
     left: 15%;
     width: 800px;
-    height: 750px
+    height: 800px
 }
 
 
 .infoPreco{
-
-    margin-top: 600px; /* mexer aqui para ajustar depois a altura*/    position: absolute;
+    position: absolute;
+    margin-top: 600px; /* mexer aqui para ajustar depois a altura*/    
     background-color: rgb(255, 255, 255);
-    border-radius: 20px;
+    border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     width: 400px;
-    height: 400px;
-    top: 120%;
+    height: 540px;
+    top: 0%;
+
     left: 65%;
 }
 
@@ -71,39 +71,56 @@
 .itemDetails{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    margin-top: 30px;
     height: 20%;
-    justify-content: space-evenly;
-}
-
-.textDescription{
-    display: flex;
-    justify-content: center;
-
+    margin-top: 50px;
+    padding: 10px;
+    justify-content: space-around;
 }
 
 .itemsDescricao{
+    position: fixed;
+    top: 80%;
+    right:110%;
+}
 
-    
+.itemDescription{
+    height: 20%;
+}
+.aboutField{
+    font-weight: 300;
+    margin-left: 80px;
+}
+
+.textAbout{
+    display: flex;
+    justify-content: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
+
 }
 
 .footerBar{
 
     justify-content: end;
-    margin-block: -800px;
-    bottom: -1000px;
+    top: 250%;
+    
     position: absolute;
     height: 200px;
 }
 
 .carouselDetalhes{
-    
-    
-    width: 950px;
-    margin-top: -1600px;
-    position: absolute;
-    display: block;
-    justify-content: center;
-    margin-left: 50vh;
-    
+        margin-top: 0px;
+        margin: 0;
+}
+.itemsVehicle{
+    font-weight:bolder
+
+}
+
+.redBarCarroussel{
+    background-color: var(--corBase);
+    height: 20px;
+    border-style: none;
+    margin-top: -0.2%;
 }
