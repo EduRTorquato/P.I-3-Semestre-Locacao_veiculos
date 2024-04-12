@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>login e cadastro</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'><link rel="stylesheet" href="../css/base/login2.css">
+	<meta charset="UTF-8">
+	<title>login e cadastro</title>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'>
+	<link rel="stylesheet" href="../css/base/login2.css">
+	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.min.css" rel="stylesheet">
 
 </head>
-<body class="loginScreen">
-<!-- partial:index.partial.html -->
 
-<div class="section">
+<body class="loginScreen">
+	<!-- partial:index.partial.html -->
+
+	<img src="..//img/personagem 1.png" class="imgPersonagemLogin" alt="">
+	<div class="section">
 		<div class="container">
-			<button class="back-button">Back</button>
 			<div class="row full-height justify-content-center">
 				<div class="col-12 text-center align-self-center py-5">
 					<div class="section pb-5 pt-5 pt-sm-2 text-center">
 						<h6 class="mb-0 pb-3"><span>Login </span><span>Cadastrar</span></h6>
-			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-			          	<label for="reg-log"></label>
+						<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+						<label for="reg-log"></label>
 						<div class="card-3d-wrap mx-auto">
 							<div class="card-3d-wrapper">
 								<div class="card-front">
@@ -26,47 +30,54 @@
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">Login</h4>
 											<div class="form-group">
-												<input type="email" name="logemail" class="form-style" placeholder="Seu Email" id="emailLogin" autocomplete="off">
+												<input type="email" itemid="usuarioLogin" name="logemail" class="form-style"
+													placeholder="Seu Email" id="emailLogin" autocomplete="off">
 												<i class="input-icon uil uil-at"></i>
-											</div>	
+											</div>
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Sua Password" id="senhaLogin" autocomplete="off">
+												<input type="password" itemid="usuarioLogin" name="logpass" class="form-style"
+													placeholder="Sua Password" id="senhaLogin" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
-											<a href="#" id="formLogin" class="btn mt-4">Entrar</a>
-                            				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">Esqueceu a senha?</a></p>
-				      					</div>
-			      					</div>
-			      				</div>
+											<a href="#" id="form-login" class="btn mt-4">Entrar</a>
+											<p class="mb-0 mt-4 text-center"><a href="#0" class="link">Esqueceu a senha?</a></p>
+										</div>
+									</div>
+								</div>
 								<div class="card-back">
 									<div class="center-wrap">
 										<form class="section text-center">
 											<h4 class="mb-4 pb-3">Cadastro</h4>
 											<div class="form-group">
-												<input type="text" name="logname" class="form-style" placeholder="Nome Completo" id="nome" autocomplete="off">
+												<input type="text" name="logname" class="form-style"
+													placeholder="Nome Completo" id="nome" autocomplete="off">
 												<i class="input-icon uil uil-user"></i>
-											</div>	
+											</div>
 											<div class="form-group mt-2">
-												<input type="email" name="logemail" class="form-style" placeholder="Seu Email" id="email" autocomplete="off">
+												<input type="email" name="logemail" class="form-style"
+													placeholder="Seu Email" id="email" autocomplete="off">
 												<i class="input-icon uil uil-at"></i>
-											</div>	
+											</div>
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Sua Senha" id="senha" autocomplete="off">
+												<input type="password" name="logpass" class="form-style"
+													placeholder="Sua Senha" id="senha" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
-											<a href="#" id="formCadastro" class="btn mt-4">cadastrar</a>
-				      					</form>
-			      					</div>
-			      				</div>
-			      			</div>
-			      		</div>
-			      	</div>
-		      	</div>
-	      	</div>
-	    </div>
+											<a href="#" id="form-cadastro" class="btn mt-4">cadastrar</a>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-<!-- partial -->
-  
-<script src="../js/cadastro.js"></script>
+	<!-- partial -->
+	<script src="../js/cadastro.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js"></script>
 </body>
+
+
 </html>

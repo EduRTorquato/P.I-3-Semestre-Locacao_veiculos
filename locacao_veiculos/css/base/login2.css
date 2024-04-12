@@ -281,7 +281,14 @@ h6 span{
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 
-
+.imgPersonagemLogin{
+  height: -1px;
+  width: 550px;
+  max-width: 700px;
+  position: absolute;
+  left: 5%;
+  bottom: 0%;
+}
 
 
 .logo {
