@@ -1,14 +1,10 @@
+.detailBody {
 
-
-
-
-.detailBody{
-  
     position: relative;
 
 }
 
-.infoDetalhes{
+.infoDetalhes {
     position: absolute;
     background-color: rgb(255, 255, 255);
     border-radius: 50px;
@@ -21,9 +17,10 @@
 }
 
 
-.infoPreco{
+.infoPreco {
     position: absolute;
-    margin-top: 600px; /* mexer aqui para ajustar depois a altura*/    
+    margin-top: 600px;
+    /* mexer aqui para ajustar depois a altura*/
     background-color: rgb(255, 255, 255);
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -35,32 +32,42 @@
     left: 65%;
 }
 
+.inputsPreco {
+    display: flex;    
+    justify-content: center;
+}
 
-.title{
+.inputText{
+    width: 300px;
+    border-style: 1px solid rgb(151, 151, 151);
+}
+
+
+.title {
     margin: 20px;
     display: flex;
 }
 
-.lettersTitle{
+.lettersTitle {
     font-size: 75px;
     font-weight: 700;
 }
 
-.lettersTitleSecond{
+.lettersTitleSecond {
     padding-left: 25px;
     font-size: 75px;
     font-weight: 700;
     color: var(--corBase);
 }
 
-.letterPrice{
+.letterPrice {
     font-size: 40px;
     font-weight: 700;
     color: var(--corBase);
 }
 
 
-.informacoesDetalhes{
+.informacoesDetalhes {
     margin-top: 30px;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -68,7 +75,7 @@
 
 }
 
-.itemDetails{
+.itemDetails {
     display: grid;
     grid-template-columns: auto auto auto auto;
     height: 20%;
@@ -77,21 +84,22 @@
     justify-content: space-around;
 }
 
-.itemsDescricao{
+.itemsDescricao {
     position: fixed;
     top: 80%;
-    right:110%;
+    right: 110%;
 }
 
-.itemDescription{
+.itemDescription {
     height: 20%;
 }
-.aboutField{
+
+.aboutField {
     font-weight: 300;
     margin-left: 80px;
 }
 
-.textAbout{
+.textAbout {
     display: flex;
     justify-content: center;
     margin-left: 80px;
@@ -100,25 +108,25 @@
 
 }
 
-.footerBar{
+.footerBar {
 
     justify-content: end;
     top: 250%;
-    
+
     position: absolute;
     height: 200px;
 }
 
-.carouselDetalhes{
-        margin-top: 0px;
-        margin: 0;
-}
-.itemsVehicle{
-    font-weight:bolder
-
+.carouselDetalhes {
+    margin-top: 0px;
+    margin: 0;
 }
 
-.redBarCarroussel{
+.itemsVehicle {
+    font-weight: bolder
+}
+
+.redBarCarroussel {
     background-color: var(--corBase);
     height: 20px;
     border-style: none;
