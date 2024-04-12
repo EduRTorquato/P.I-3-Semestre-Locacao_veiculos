@@ -26,36 +26,36 @@
 										<div class="section text-center">
 											<h4 class="mb-4 pb-3">Login</h4>
 											<div class="form-group">
-												<input type="email" name="logemail" class="form-style" placeholder="Seu Email" id="logemail" autocomplete="off">
+												<input type="email" name="logemail" class="form-style" placeholder="Seu Email" id="emailLogin" autocomplete="off">
 												<i class="input-icon uil uil-at"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Sua Password" id="logpass" autocomplete="off">
+												<input type="password" name="logpass" class="form-style" placeholder="Sua Password" id="senhaLogin" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
-											<a href="#" class="btn mt-4">Entrar</a>
+											<a href="#" id="formLogin" class="btn mt-4">Entrar</a>
                             				<p class="mb-0 mt-4 text-center"><a href="#0" class="link">Esqueceu a senha?</a></p>
 				      					</div>
 			      					</div>
 			      				</div>
 								<div class="card-back">
 									<div class="center-wrap">
-										<div class="section text-center">
+										<form class="section text-center">
 											<h4 class="mb-4 pb-3">Cadastro</h4>
 											<div class="form-group">
-												<input type="text" name="logname" class="form-style" placeholder="Nome Completo" id="logname" autocomplete="off">
+												<input type="text" name="logname" class="form-style" placeholder="Nome Completo" id="nome" autocomplete="off">
 												<i class="input-icon uil uil-user"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="email" name="logemail" class="form-style" placeholder="Seu Email" id="logemail" autocomplete="off">
+												<input type="email" name="logemail" class="form-style" placeholder="Seu Email" id="email" autocomplete="off">
 												<i class="input-icon uil uil-at"></i>
 											</div>	
 											<div class="form-group mt-2">
-												<input type="password" name="logpass" class="form-style" placeholder="Sua Senha" id="logpass" autocomplete="off">
+												<input type="password" name="logpass" class="form-style" placeholder="Sua Senha" id="senha" autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
-											<a href="#" class="btn mt-4">cadastrar</a>
-				      					</div>
+											<a href="#" id="formCadastro" class="btn mt-4">cadastrar</a>
+				      					</form>
 			      					</div>
 			      				</div>
 			      			</div>
@@ -67,5 +67,6 @@
 	</div>
 <!-- partial -->
   
+<script src="../js/cadastro.js"></script>
 </body>
 </html>
