@@ -3,10 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>login e cadastro</title>
+	<title>Login ou Cadastro</title>
 	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
 	<link rel='stylesheet' href='https://unicons.iconscout.com/release/v2.1.9/css/unicons.css'>
 	<link rel="stylesheet" href="../css/base/login2.css">
+	<link rel="icon" href="../img/logos/katchauRed.png">
 	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.min.css" rel="stylesheet">
 
 </head>
@@ -50,20 +51,20 @@
 											<h4 class="mb-4 pb-3">Cadastro</h4>
 											<div class="form-group">
 												<input type="text" name="logname" class="form-style"
-													placeholder="Nome Completo" id="nome" autocomplete="off">
+													placeholder="Nome Completo" id="nome" required autocomplete="off">
 												<i class="input-icon uil uil-user"></i>
 											</div>
 											<div class="form-group mt-2">
 												<input type="email" name="logemail" class="form-style"
-													placeholder="Seu Email" id="email" autocomplete="off">
+													placeholder="Seu Email" id="email" required autocomplete="off">
 												<i class="input-icon uil uil-at"></i>
 											</div>
 											<div class="form-group mt-2">
 												<input type="password" name="logpass" class="form-style"
-													placeholder="Sua Senha" id="senha" autocomplete="off">
+													placeholder="Sua Senha" id="senha" required autocomplete="off">
 												<i class="input-icon uil uil-lock-alt"></i>
 											</div>
-											<a href="#" id="form-cadastro" class="btn mt-4">cadastrar</a>
+											<button id="form-cadastro" class="btn mt-4">cadastrar</button>
 										</form>
 									</div>
 								</div>

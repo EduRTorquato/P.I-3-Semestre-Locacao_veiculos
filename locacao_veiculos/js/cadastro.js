@@ -1,24 +1,23 @@
 const formCadastro = document.getElementById("form-cadastro");
 
+const nome = document.getElementById("nome");
+const email = document.getElementById("email");
+const senha = document.getElementById("senha");
+
+
+
 formCadastro.addEventListener("click", (event) => {
 
-
-
-
-
-
-    // Obter os valores dos campos
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
-
+    // event.preventDefault();
 
     // Criar um objeto com os dados do usuário
     const usuario = {
-        nome,
-        email,
-        senha,
+        nome: nome.value,
+        email: email.value,
+        senha: senha.value,
     };
+
+    console.log(usuario)
 
     // Chamar a API para cadastrar o usuário
     fetch("http://localhost:8080/user", {
@@ -53,8 +52,33 @@ formCadastro.addEventListener("click", (event) => {
             timer: 1500
         });
     });
-
 });
+
+
+
+
+
+nome.addEventListener("input", (event) => {
+    console.log(nome.value)
+    if (nome.value.trim !== '' && email.value.trim !== '' && senha.value.trim !== '') {
+        formCadastro.disabled = false;
+    }
+});
+
+email.addEventListener("input", (event) => {
+    console.log(email.value)
+    if (nome.value.trim !== '' && email.value.trim !== '' && senha.value.trim !== '') {
+        formCadastro.disabled = false;
+    }
+});
+
+senha.addEventListener("input", (event) => {
+    console.log(senha.value)
+    if (nome.value.trim !== '' && email.value.trim !== '' && senha.value.trim !== '') {
+        formCadastro.disabled = false;
+    }
+});
+
 
 // ======================= LOGIN ======================= \\ 
 
@@ -64,19 +88,19 @@ formLogin.addEventListener("click", (event) => {
     event.preventDefault();
 
     // Obter os valores dos campos
-    const emailLogin = document.getElementById("emailLogin").value;
-    const senhaLogin = document.getElementById("senhaLogin").value;
+    const email = document.getElementById("emailLogin").value;
+    const senha = document.getElementById("senhaLogin").value;
 
     // Criar um objeto com os dados do usuário
-    const usuarioLogin = {
-        emailLogin,
-        senhaLogin,
+    const usuario = {
+        email,
+        senha,
     };
 
     // Chamar a API para fazer login
     fetch("http://localhost:8080/user/login", {
         method: "POST",
-        body: JSON.stringify(usuarioLogin),
+        body: JSON.stringify(usuario),
         headers: {
             "Content-Type": "application/json",
         },
