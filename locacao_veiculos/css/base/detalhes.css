@@ -1,7 +1,5 @@
 .detailBody {
-
     position: relative;
-
 }
 
 .infoDetalhes {
@@ -9,37 +7,84 @@
     background-color: rgb(255, 255, 255);
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-    top: 90%;
-    left: 15%;
+    margin-top: 38vh;
+    top: 60%;
+    left: 10%;
     width: 800px;
-    height: 800px
+    height: 800px;
 }
-
 
 .infoPreco {
     position: absolute;
-    margin-top: 600px;
-    /* mexer aqui para ajustar depois a altura*/
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 254);
     border-radius: 50px;
+   
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-    width: 400px;
-    height: 540px;
-    top: 0%;
-
-    left: 65%;
+    width: 30vw; /* ou qualquer largura desejada */
+    height: 50vh; /* ou qualquer altura desejada */
+    top: 150%; /* mesma posição vertical que .infoDetalhes */
+    left: calc(30% + 800px + 40px); /* ajuste para posicionar ao lado de .infoDetalhes */
+    transform: translate(-50%, -50%); /* para centralizar */
 }
 
-.inputsPreco {
+.inputsPreco {margin-top: 10px;
     display: flex;    
     justify-content: center;
 }
 
-.inputText{
+.inputText {
+    display: flex;
     width: 300px;
-    border-style: 1px solid rgb(151, 151, 151);
+    border-style: solid;
+    border-width: 1px;
+    top:80%;
+    border-color: rgb(151, 151, 151);
+    
+}
+.sendMensage{
+    font-weight: bold;
+    margin-top: 5%;
+    color: rgb(164, 2, 2);
+    animation: blink 2s infinite; /* os segundos muda o tempo que o txto fica invisivel*/
+}
+
+@keyframes blink{  /* aqui muda o tamanho e cor*/
+    50%{
+        opacity: 1;
+    }
+    50%{
+        color: grey;
+        opacity: 0;
+    }
+}           /* aqui muda o tamanho e cor*/
+
+
+.btnSend{
+    margin-top: 80px;
+    background-color: red;
+    color: rgb(222, 222, 222);   
+    width: 80px;
+    height: 30px;
+   
+}
+
+.emailPreco{
+    margin-top: 100px;
+ position: relative;
+    margin-bottom: 5%;
+    margin: 80px;
+    width: 300px;
+    margin: 10px;
+}
+
+.nomePreco{
+    width: 300px;
+    margin: 10px;
+}
+
+.telPreco{
+    width: 300px;
+    margin: 10px;
 }
 
 
@@ -66,13 +111,11 @@
     color: var(--corBase);
 }
 
-
 .informacoesDetalhes {
     margin-top: 30px;
     display: grid;
     grid-template-columns: auto auto auto auto;
     height: 500px;
-
 }
 
 .itemDetails {
@@ -80,7 +123,7 @@
     grid-template-columns: auto auto auto;
     height: 20%;
     margin-top: 40px;
-    padding: 00px;
+    padding: 0;
     margin-left: 80px;
     margin-right: 80px;
     justify-content: space-around;
@@ -107,14 +150,11 @@
     margin-left: 80px;
     margin-right: 80px;
     margin-top: 20px;
-
 }
 
 .footerBar {
-
     justify-content: end;
     top: 250%;
-
     position: absolute;
     height: 200px;
 }
@@ -125,13 +165,13 @@
 }
 
 .itemsVehicle {
-    font-weight: bolder;
+    font-weight: bold; /* corrigido de bolder para bold */
     display: flex;
     text-align: center;
     font-size: 15px;
 }
 
-.items{
+.items {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,3 +184,5 @@
     border-style: none;
     margin-top: -0.2%;
 }
+
+
