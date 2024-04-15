@@ -104,7 +104,7 @@
 }
 
 
-.container>div>.imgCard {
+.imgCard{
 
     
     top: 0;
@@ -117,7 +117,7 @@
 
 }
 
-.container>div>.imgCard:hover {
+.imgCard:hover {
     height: 270px;
     width: 450px;
     cursor: pointer;
@@ -136,9 +136,10 @@
     left: 28%;
     top: 3%;
     position: absolute;
+    width: 200px;
 }
 
-#textCard {
+.textCard {
     position: absolute;
     top: 0;
     margin-top: 90%;

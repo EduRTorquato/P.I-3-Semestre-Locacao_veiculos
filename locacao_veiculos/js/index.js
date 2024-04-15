@@ -1,16 +1,7 @@
 
+chamar();
 
 
-
-
-
-
-
-
-
-
-
-const finalizaCadastro = document.getElementById('finalizaCadastro');
 
 const idImg = document.getElementById('id_imagem');
 
@@ -22,54 +13,98 @@ const idServicos = document.getElementById('id_servicos');
 
 const idAjuda = document.getElementById('id_ajuda');
 
-idImg.addEventListener('click', function(){
-    window.location.pathname="/locacao_veiculos/paginas/detalhes.html";
-} )
-
-finalizaCadastro.addEventListener('click', function(){
-    console.log('FUNCIONANDO')
-    window.location.pathname="/locacao_veiculos/paginas/home.html";
-} )
+var carros = [];
 
 
-idCompra.addEventListener('click', function(){
+idImg.addEventListener('click', function () {
+    window.location.pathname = "/locacao_veiculos/paginas/detalhes.html";
+})
+
+
+
+idCompra.addEventListener('click', function () {
     console.log('COMPRAR')
- } );
+});
 
-idAluga.addEventListener('click', function(){
-   console.log('ALUGAR')
-} )
+idAluga.addEventListener('click', function () {
+    console.log('ALUGAR')
+})
 
-idAjuda.addEventListener('click', function(){
-   console.log('AJUDA')
-} )
+idAjuda.addEventListener('click', function () {
+    console.log('AJUDA')
+})
 
-idServicos.addEventListener('click', function(){
-   console.log('SERVICOS')
-} )
+idServicos.addEventListener('click', function () {
+    console.log('SERVICOS')
+})
 
-const backButton = document.querySelector('.back-button');
 const root = document.documentElement;
 
-backButton.addEventListener('click', function() {
-    root.scrollTo({top: 0, behavior: 'smooth'});
-    console.log('voltando')
-    window.location.pathname="/locacao_veiculos/paginas/home.html";
-});
-window.addEventListener('scroll', () => {
-   if(window.pageYOffset > 100) {
-       backButton.classList.add('show-button');
-   } else {
-       backButton.classList.remove('show-button');
-   }
-});
 
-idCriarConta.addEventListener('click', function(){
-    console.log('Criar')
-    window.location.pathname="/locacao_veiculos"
- } )
- 
+function chamar() {
 
+    // Chamar a API para cadastrar o usuário
+    fetch("http://localhost:8080/cars").then(response => {
+        if (response.ok) {
+            console.log(response.body)
+        }
+        return response.json();
+    }).then((data) =>{
+
+        carros = data;
+        console.log(data);
+        console.log(carros);
+
+        criaCards(carros);
+
+
+    }).catch((error) => {
+        console.error(error);
+    });
+}
+
+var listaDivs = document.getElementById("container");
+
+function criaCards(dados){
+    dados.forEach(function(dado) {
+        var divCard = document.createElement("divCard"); // Cria uma nova div
+        var img = document.createElement("img"); //Cria a div de imagem
+        var textCard = document.createElement("div"); //Cria a div para abranger os textos
+        
+        //APPEND BY textCard
+        var title = document.createElement("h1"); // Título do card
+        var description = document.createElement("p"); // Descrição do card
+        var line = document.createElement("hr"); // HR que separa o preço
+        var price = document.createElement("p"); // Preço
+        
+
+        img.classList.add("imgCard"); // Adiciona a classe CSS para estilizar a div
+        divCard.classList.add("card"); 
+        textCard.classList.add("textCard");
+        description.classList.add("legend");
+        line.classList.add("line");
+        price.classList.add("price");
+
+        img.setAttribute("src", dado.link_png)
+        console.log(dado.link_png)
+        title.innerHTML = dado.nome;
+        description.innerText = dado.descricao;
+        price.innerText = "R$ " + dado.vehicle_price
+
+        
+
+        
+        listaDivs.appendChild(divCard); // Adiciona a div à lista
+        divCard.appendChild(img);
+        divCard.appendChild(textCard);
+        textCard.appendChild(title);
+        textCard.appendChild(description);
+        textCard.appendChild(line);
+        textCard.appendChild(price);
+
+
+    });
+}
 
 
 
