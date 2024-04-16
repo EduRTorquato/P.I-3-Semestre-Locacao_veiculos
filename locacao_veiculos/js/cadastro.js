@@ -1,7 +1,7 @@
 const formCadastro = document.getElementById("form-cadastro");
 
 const nome = document.getElementById("nome");
-const email = document.getElementById("email");
+const email = document.getElementById("email").value;
 const senha = document.getElementById("senha");
 
 
@@ -17,67 +17,46 @@ formCadastro.addEventListener("click", (event) => {
         senha: senha.value,
     };
 
-    console.log(usuario)
+    if (usuario.email == '' || usuario.nome == '' || usuario.senha == '') {
 
-    // Chamar a API para cadastrar o usuário
-    fetch("http://localhost:8080/user", {
-        method: "POST",
-        body: JSON.stringify(usuario),
-        headers: {
-            "Content-Type": "application/json",
-        },
-    }).then(response => {
-        if (!response.ok) {
-            throw new Error("Email ou senha incorretos");
-        } else {
+    } else {
+        // Chamar a API para cadastrar o usuário
+        fetch("http://localhost:8080/user", {
+            method: "POST",
+            body: JSON.stringify(usuario),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error("Email ou senha incorretos");
+            } else {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Usuário Cadastrado!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+
+                document.getElementById("reg-log").checked = false;
+
+            }
+            return response.json();
+        }).catch((error) => {
+            console.error(error);
             Swal.fire({
                 position: "top-end",
-                icon: "success",
-                title: "Usuário Cadastrado!",
+                icon: "warning",
+                title: "Esse email já existe!",
                 showConfirmButton: false,
                 timer: 1500
             });
-
-            document.getElementById("reg-log").checked = false;
-
-        }
-        return response.json();
-    }).catch((error) => {
-        console.error(error);
-        Swal.fire({
-            position: "top-end",
-            icon: "warning",
-            title: "Esse email já existe!",
-            showConfirmButton: false,
-            timer: 1500
         });
-    });
-});
-
-
-
-
-
-nome.addEventListener("input", (event) => {
-    console.log(nome.value)
-    if (nome.value.trim !== '' && email.value.trim !== '' && senha.value.trim !== '') {
-        formCadastro.disabled = false;
     }
 });
 
-email.addEventListener("input", (event) => {
-    console.log(email.value)
-    if (nome.value.trim !== '' && email.value.trim !== '' && senha.value.trim !== '') {
-        formCadastro.disabled = false;
-    }
-});
 
-senha.addEventListener("input", (event) => {
-    console.log(senha.value)
-    if (nome.value.trim !== '' && email.value.trim !== '' && senha.value.trim !== '') {
-        formCadastro.disabled = false;
-    }
-});
 
 
 // ======================= LOGIN ======================= \\ 
@@ -97,26 +76,37 @@ formLogin.addEventListener("click", (event) => {
         senha,
     };
 
-    // Chamar a API para fazer login
-    fetch("http://localhost:8080/user/login", {
-        method: "POST",
-        body: JSON.stringify(usuario),
-        headers: {
-            "Content-Type": "application/json",
-        },
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Email ou senha incorretos");
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Redirecionar para outra página após o login bem-sucedido
-            window.location.href = "home.html";
-        })
-        .catch(error => {
-            console.error(error);
-            alert("Erro ao fazer login!");
+    if (usuario.email == '' || usuario.senha == '') {
+        Swal.fire({
+            position: "top-end",
+            icon: "warning",
+            title: "Preencha os campos",
+            showConfirmButton: false,
+            timer: 1500
         });
+
+    } else {
+        // Chamar a API para fazer login
+        fetch("http://localhost:8080/user/login", {
+            method: "POST",
+            body: JSON.stringify(usuario),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Email ou senha incorretos");
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Redirecionar para outra página após o login bem-sucedido
+                window.location.href = "home.html";
+            })
+            .catch(error => {
+                console.error(error);
+                alert("Erro ao fazer login!");
+            });
+    }
 });

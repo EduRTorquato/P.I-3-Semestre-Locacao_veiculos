@@ -15,7 +15,6 @@ const idAjuda = document.getElementById('id_ajuda');
 
 var carros = [];
 
-
 idImg.addEventListener('click', function () {
     window.location.pathname = "/locacao_veiculos/paginas/detalhes.html";
 })
@@ -46,15 +45,12 @@ function chamar() {
     // Chamar a API para cadastrar o usuário
     fetch("http://localhost:8080/cars").then(response => {
         if (response.ok) {
-            console.log(response.body)
+           
         }
         return response.json();
     }).then((data) =>{
 
         carros = data;
-        console.log(data);
-        console.log(carros);
-
         criaCards(carros);
 
 
@@ -64,6 +60,8 @@ function chamar() {
 }
 
 var listaDivs = document.getElementById("container");
+
+
 
 function criaCards(dados){
     dados.forEach(function(dado) {
@@ -85,16 +83,18 @@ function criaCards(dados){
         line.classList.add("line");
         price.classList.add("price");
 
+
+
         img.setAttribute("src", dado.link_png)
-        console.log(dado.link_png)
         title.innerHTML = dado.nome;
         description.innerText = dado.descricao;
         price.innerText = "R$ " + dado.vehicle_price
+        divCard.onclick = function() { console.log(dado); };
 
         
 
         
-        listaDivs.appendChild(divCard); // Adiciona a div à lista
+        listaDivs.appendChild(divCard); // Monta o HTML 
         divCard.appendChild(img);
         divCard.appendChild(textCard);
         textCard.appendChild(title);
