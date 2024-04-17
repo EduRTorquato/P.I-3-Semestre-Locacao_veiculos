@@ -290,6 +290,15 @@ h6 span{
   bottom: 0%;
 }
 
+.imgLogoLogin{
+  height: -1px;
+  width: 200px;
+  max-width: 700px;
+  position: absolute;
+  top: 2%;
+  bottom: 0%;
+}
+
 
 .logo {
 	position: absolute;
@@ -304,6 +313,7 @@ h6 span{
 	width: auto;
 	display: block;
 }
+
 .back-button {
   position: fixed;
   bottom: 20px;

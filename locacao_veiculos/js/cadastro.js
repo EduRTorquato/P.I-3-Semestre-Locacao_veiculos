@@ -106,7 +106,13 @@ formLogin.addEventListener("click", (event) => {
             })
             .catch(error => {
                 console.error(error);
-                alert("Erro ao fazer login!");
+                Swal.fire({
+                    position: "top-end",
+                    icon: "warning",
+                    title: "Email ou senha inválidos!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
             });
     }
 });
