@@ -1,14 +1,14 @@
 const formCadastro = document.getElementById("form-cadastro");
 
 const nome = document.getElementById("nome");
-const email = document.getElementById("email").value;
+const email = document.getElementById("email");
 const senha = document.getElementById("senha");
 
 
 
 formCadastro.addEventListener("click", (event) => {
 
-    // event.preventDefault();
+    event.preventDefault();
 
     // Criar um objeto com os dados do usuário
     const usuario = {
@@ -18,6 +18,15 @@ formCadastro.addEventListener("click", (event) => {
     };
 
     if (usuario.email == '' || usuario.nome == '' || usuario.senha == '') {
+
+
+        Swal.fire({
+            position: "top-end",
+            icon: "warning",
+            title: "Preencha os campos vazios!",
+            showConfirmButton: false,
+            timer: 1500
+        });
 
     } else {
         // Chamar a API para cadastrar o usuário
