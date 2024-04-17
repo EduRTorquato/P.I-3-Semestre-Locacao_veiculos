@@ -2,87 +2,44 @@
     position: relative;
 }
 
-.infoDetalhes {
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin-top: 38vh;
-    top: 60%;
-    left: 10%;
-    width: 800px;
-    height: 800px;
-}
 
-.infoPreco {
-    position: absolute;
-    background-color: rgb(255, 255, 254);
-    border-radius: 50px;
-   
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 30vw; /* ou qualquer largura desejada */
-    height: 50vh; /* ou qualquer altura desejada */
-    top: 150%; /* mesma posição vertical que .infoDetalhes */
-    left: calc(30% + 800px + 40px); /* ajuste para posicionar ao lado de .infoDetalhes */
-    transform: translate(-50%, -50%); /* para centralizar */
-}
-
-.inputsPreco {margin-top: 10px;
-    display: flex;    
-    justify-content: center;
-}
-
-.inputText {
-    display: flex;
-    width: 300px;
-    border-style: solid;
-    border-width: 1px;
-    top:80%;
-    border-color: rgb(151, 151, 151);
-    
-}
-.sendMensage{
+.sendMensage {
     font-weight: bold;
     margin-top: 5%;
     color: rgb(164, 2, 2);
-    animation: blink 2s infinite; /* os segundos muda o tempo que o txto fica invisivel*/
+    animation: blink 2s infinite;
 }
 
-@keyframes blink{  /* aqui muda o tamanho e cor*/
-    50%{
+@keyframes blink {
+
+    /* aqui muda o tamanho e cor*/
+    50% {
         opacity: 1;
     }
-    50%{
+
+    50% {
         color: grey;
         opacity: 0;
     }
-}           /* aqui muda o tamanho e cor*/
-
-
-.btnSend{
-    margin-top: 80px;
-    background-color: red;
-    color: rgb(222, 222, 222);   
-    width: 80px;
-    height: 30px;
-   
 }
 
-.emailPreco{
+/* aqui muda o tamanho e cor*/
+
+.emailPreco {
     margin-top: 100px;
- position: relative;
+    position: relative;
     margin-bottom: 5%;
     margin: 80px;
     width: 300px;
     margin: 10px;
 }
 
-.nomePreco{
+.nomePreco {
     width: 300px;
     margin: 10px;
 }
 
-.telPreco{
+.telPreco {
     width: 300px;
     margin: 10px;
 }
@@ -106,9 +63,10 @@
 }
 
 .letterPrice {
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 45px;
+    font-weight: 800;
     color: var(--corBase);
+    margin-left: 35px;
 }
 
 .informacoesDetalhes {
@@ -165,7 +123,8 @@
 }
 
 .itemsVehicle {
-    font-weight: bold; /* corrigido de bolder para bold */
+    font-weight: bold;
+    /* corrigido de bolder para bold */
     display: flex;
     text-align: center;
     font-size: 15px;
@@ -185,4 +144,46 @@
     margin-top: -0.2%;
 }
 
+.confirmInterest {
+    background-color: var(--corBase);
+    color: white;
+    border-radius: 20px;
+    width: 300px;
+    margin-left: 16px;
+}
 
+.confirmInterest:hover {
+    background-color:var(--hover);
+    color: white;
+}
+
+.inputsPreco {
+    display: flex;
+    justify-content: center;
+}
+
+.infoPreco {
+    position: absolute;
+    background-color: rgb(255, 255, 254);
+    border-radius: 50px;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 400px;
+
+    height: 500px;
+    top: 130%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.infoDetalhes {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 38vh;
+    top: 40%;
+    left: 10%;
+    width: 800px;
+    height: 800px;
+}
