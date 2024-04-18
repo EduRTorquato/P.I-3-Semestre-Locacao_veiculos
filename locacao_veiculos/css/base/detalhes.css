@@ -59,6 +59,7 @@
 .lettersTitle {
     font-size: 75px;
     font-weight: 700;
+    color: var(--contrasteFundo);
 }
 
 .lettersTitleSecond {
@@ -160,7 +161,7 @@
 }
 
 .imageCarroussel{
-    height: 600px;
+    height: 550px;
 }
 
 .confirmInterest {
@@ -201,7 +202,7 @@
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-top: 38vh;
-    top: 40%;
+    top: 34%;
     left: 10%;
     width: 800px;
     height: 800px;

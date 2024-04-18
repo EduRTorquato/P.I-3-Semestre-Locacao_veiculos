@@ -16,7 +16,7 @@
 
 /* FINDER VEÍCULOS */
 #finder {
-    margin-top: 76px;
+    margin-top: 81px;
     display: flex;
     justify-content: center;
     position: absolute;
@@ -97,7 +97,7 @@
     height: 400px;
     width: 300px;
     border-radius: 20px;
-    background-color: #2E2D37;
+    background-color: var(--contrasteFundo);
     color: white;
     margin: 20px;
     cursor: pointer;
@@ -177,7 +177,8 @@ footer {
 }
 
 .informacoes {
-    display: grid;
+    display: flex;
+    text-align: center;
     grid-template-columns: auto auto auto auto;
     height: 200px;
     position: relative;
@@ -229,12 +230,13 @@ footer {
     }
 
     #finder {
-        margin-top: 76px;
+        margin-top: 79px;
         display: flex;
         justify-content: center;
         position: absolute;
         left: 30%;
         top: 26.5%;
+        border: solid;
     }
 
     nav {
