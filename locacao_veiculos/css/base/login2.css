@@ -15,7 +15,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(/locacao_veiculos/img/telaLogin.png);
+  background-image: url(/locacao_veiculos/img/background.png);
   position: relative;
 }
 
@@ -283,19 +283,19 @@ h6 span{
 
 .imgPersonagemLogin{
   height: -1px;
-  width: 550px;
+  width: 850px;
   max-width: 700px;
   position: absolute;
   left: 5%;
-  bottom: 0%;
+  bottom: 20%;
 }
 
 .imgLogoLogin{
   height: -1px;
-  width: 200px;
+  width: 180px;
   max-width: 700px;
   position: absolute;
-  top: 2%;
+  top: 80%;
   bottom: 0%;
 }
 

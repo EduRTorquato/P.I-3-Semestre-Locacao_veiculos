@@ -40,10 +40,10 @@ idServicos.addEventListener('click', function () {
 const root = document.documentElement;
 
 
-function chamar() {
+async function chamar() {
 
     // Chamar a API para cadastrar o usuário
-    fetch("http://localhost:8080/cars").then(response => {
+    await fetch("http://localhost:8080/cars").then(response => {
         if (response.ok) {
            
         }

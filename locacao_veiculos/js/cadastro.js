@@ -6,7 +6,7 @@ const senha = document.getElementById("senha");
 
 
 
-formCadastro.addEventListener("click", (event) => {
+formCadastro.addEventListener("click", async (event) => {
 
     event.preventDefault();
 
@@ -30,7 +30,7 @@ formCadastro.addEventListener("click", (event) => {
 
     } else {
         // Chamar a API para cadastrar o usuário
-        fetch("http://localhost:8080/user", {
+       await fetch("http://localhost:8080/user", {
             method: "POST",
             body: JSON.stringify(usuario),
             headers: {
