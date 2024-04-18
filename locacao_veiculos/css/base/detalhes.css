@@ -45,9 +45,15 @@
 }
 
 
+
 .title {
-    margin: 20px;
+    margin-left: 140px;
+    margin-top: 30px;
     display: flex;
+}
+
+.titlePreco{
+    margin: 26px;
 }
 
 .lettersTitle {
@@ -130,6 +136,15 @@
     font-size: 15px;
 }
 
+.itemsVehicleNegative {
+    font-weight: bold;
+    color:rgb(211, 211, 211);
+    /* corrigido de bolder para bold */
+    display: flex;
+    text-align: center;
+    font-size: 15px;
+}
+
 .items {
     display: flex;
     flex-direction: column;
@@ -142,6 +157,10 @@
     height: 20px;
     border-style: none;
     margin-top: -0.2%;
+}
+
+.imageCarroussel{
+    height: 600px;
 }
 
 .confirmInterest {
@@ -171,7 +190,7 @@
     width: 400px;
 
     height: 500px;
-    top: 130%;
+    top: 123%;
     left: 70%;
     transform: translate(-50%, -50%);
 }

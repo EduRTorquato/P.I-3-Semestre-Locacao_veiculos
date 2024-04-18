@@ -33,10 +33,10 @@
 
     <div class="carouselDetalhes">
         <div class="my-slider">
-            <div><img src="../img/carrousselDetail/image 3.png" alt=""></div>
-            <div><img src="../img/carrousselDetail/image 4.png" alt=""></div>
-            <div><img src="../img/carrousselDetail/image 3.png" alt=""></div>
-            <div><img src="../img/carrousselDetail/image 4.png" alt=""></div>
+            <div><img class="imageCarroussel" id="first_imageid" src="../img/carrousselDetail/image 3.png" alt=""></div>
+            <div><img class="imageCarroussel" id="second_imageid" src="../img/carrousselDetail/image 4.png" alt=""></div>
+            <div><img class="imageCarroussel" id="third_imageid" src="../img/carrousselDetail/image 3.png" alt=""></div>
+         
         </div>
 
     </div>
@@ -45,49 +45,48 @@
 
     <div class="infoDetalhes">
         <div class="title">
-            <h1 class="lettersTitle">CARRO <h1 class="lettersTitleSecond">DETALHE</h1>
-            </h1>
+            <h1 id="primeiroNome" class="lettersTitle">CARRO <h1 id="segundoNome" class="lettersTitleSecond">DETALHE</h1></h1>
         </div>
 
         <div class="itemDetails">
             <div class="items">
                 <p>Cidade</p>
-                <p>ITEM</p>
+                <p id="cidadeid">ITEM</p>
             </div>
 
             <div class="items">
                 <p>KM</p>
-                <p>ITEM</p>
+                <p id="kmid">ITEM</p>
             </div>
 
             <div class="items">
                 <p>Câmbio</p>
-                <p>ITEM</p>
+                <p id="cambioid">ITEM</p>
             </div>
 
             <div class="items">
                 <p>Carroceria</p>
-                <p>ITEM</p>
+                <p id="carroceriaid">ITEM</p>
             </div>
 
             <div class="items">
                 <p>Ano</p>
-                <p>ITEM</p>
+                <p id="anoid">ITEM</p>
             </div>
 
             <div class="items">
                 <p>Final da Placa</p>
-                <p>ITEM</p>
+                <p id="finalplacaid">ITEM</p>
             </div>
 
             <div class="items">
                 <p>Cor</p>
-                <p>ITEM</p>
+                <p id="corid">ITEM</p>
             </div>
 
             <div class="items">
                 <p>Aceita Troca</p>
-                <p>ITEM</p>
+                <p id="trocaid">ITEM</p>
             </div>
 
 
@@ -102,7 +101,7 @@
 
             <div class="textAbout">
 
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo modi voluptas quis id inventore, est
+                <p id="descricaoId">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo modi voluptas quis id inventore, est
                     sequi
                     eveniet natus adipisci sed explicabo, commodi vero recusandae officiis asperiores earum. Enim,
                     tempora
@@ -123,35 +122,35 @@
 
         <div class="itemDetails">
             <div class="items">
-                <p class="itemsVehicle">Alarme</p>
+                <p id="alarmid" class="">Alarme</p>
             </div>
 
             <div class="items">
-                <p class="itemsVehicle">Travas elétricas</p>
+                <p id="travasid" class="">Travas elétricas</p>
             </div>
 
             <div class="items">
-                <p class="itemsVehicle">Freio ABS</p>
+                <p id="absid" class="">Freio ABS</p>
             </div>
 
             <div class="items">
-                <p class="itemsVehicle">Computador de Bordo</p>
+                <p id="computadorid" class="">Computador de Bordo</p>
             </div>
 
             <div class="items">
-                <p class="itemsVehicle">Ar Condicionado</p>
+                <p id="ar_condicionadoid" class="">Ar Condicionado</p>
             </div>
 
             <div class="items">
-                <p class="itemsVehicle">Sensor Estacionamento</p>
+                <p id="sensorid" class="">Sensor Estacionamento</p>
             </div>
 
             <div class="items">
-                <p class="itemsVehicle">Desembaçador traseiro</p>
+                <p id="desembacadorid" class="">Desembaçador traseiro</p>
             </div>
 
             <div class="items">
-                <p class="itemsVehicle">Controle de tração</p>
+                <p id="controleid" class="">Controle de tração</p>
             </div>
 
 
@@ -161,8 +160,8 @@
     </div>
 
     <div class="infoPreco">
-        <div class="title">
-            <h1 class="letterPrice">R$ 81.000.00</h1>
+        <div class="titlePreco">
+            <h1 id="precoId" class="letterPrice">R$ 81.000.00</h1>
         </div>
 
         <div class="inputsPreco">
@@ -219,7 +218,7 @@
             autoplayButtonOutput: false,
             controls: false,
             nav: false,
-            edgePadding: 40,
+            edgePadding: 130,
             autoplayTimeout: 4000,
             nextButton: true,
             responsive: false

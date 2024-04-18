@@ -45,10 +45,10 @@ async function chamar() {
     // Chamar a API para cadastrar o usuário
     await fetch("http://localhost:8080/cars").then(response => {
         if (response.ok) {
-           
+
         }
         return response.json();
-    }).then((data) =>{
+    }).then((data) => {
 
         carros = data;
         criaCards(carros);
@@ -62,22 +62,31 @@ async function chamar() {
 var listaDivs = document.getElementById("container");
 
 
+async function setarDados(dados) {
+    // console.log("Chamou setar dados");
+    console.log(dados);
+    sessionStorage.setItem("carro", JSON.stringify(dados));
 
-function criaCards(dados){
-    dados.forEach(function(dado) {
+    window.location = "detalhes.html";
+}
+
+
+
+function criaCards(dados) {
+    dados.forEach(function (dado) {
         var divCard = document.createElement("divCard"); // Cria uma nova div
         var img = document.createElement("img"); //Cria a div de imagem
         var textCard = document.createElement("div"); //Cria a div para abranger os textos
-        
+
         //APPEND BY textCard
         var title = document.createElement("h1"); // Título do card
         var description = document.createElement("p"); // Descrição do card
         var line = document.createElement("hr"); // HR que separa o preço
         var price = document.createElement("p"); // Preço
-        
+
 
         img.classList.add("imgCard"); // Adiciona a classe CSS para estilizar a div
-        divCard.classList.add("card"); 
+        divCard.classList.add("card");
         textCard.classList.add("textCard");
         description.classList.add("legend");
         line.classList.add("line");
@@ -89,11 +98,11 @@ function criaCards(dados){
         title.innerHTML = dado.nome;
         description.innerText = dado.descricao;
         price.innerText = "R$ " + dado.vehicle_price
-        divCard.onclick = function() { console.log(dado); };
+        divCard.onclick = function () {setarDados(dado)};
 
-        
 
-        
+
+
         listaDivs.appendChild(divCard); // Monta o HTML 
         divCard.appendChild(img);
         divCard.appendChild(textCard);
