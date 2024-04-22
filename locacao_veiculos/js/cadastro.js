@@ -111,6 +111,7 @@ formLogin.addEventListener("click", (event) => {
             })
             .then(data => {
                 // Redirecionar para outra página após o login bem-sucedido
+                sessionStorage.setItem("user", JSON.stringify(usuario));
                 window.location.href = "home.html";
             })
             .catch(error => {

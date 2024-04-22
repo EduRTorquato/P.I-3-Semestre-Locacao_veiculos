@@ -21,14 +21,18 @@
     justify-content: center;
     position: absolute;
     left: 35%;
-    top: 32.2%;
+    top: 40%;
 }
 
 #box {
     background-color: white;
     width: 600px;
-    height: 150px;
+    height: 100px;
     border-radius: 10px;
+}
+
+.links{
+    padding-left: 75px;
 }
 
 .nav-itensBox {
@@ -72,6 +76,15 @@
 
 #pesquisa>button:hover {
     background-color: var(--hover);
+}
+
+.logoutLogin{
+    color: white;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.logoutLogin:hover{
+    color: var(--corBase);
 }
 
 .acordion{

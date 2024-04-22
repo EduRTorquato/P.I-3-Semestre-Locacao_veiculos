@@ -3,45 +3,45 @@ chamar();
 
 
 
-const idImg = document.getElementById('id_imagem');
-
-const idCompra = document.getElementById('id_comprar');
 
 const idAluga = document.getElementById('id_alugar');
 
 const idServicos = document.getElementById('id_servicos');
 
-const idAjuda = document.getElementById('id_ajuda');
+const id_perfil = document.getElementById('id_perfil');
+
+const logoutLogin = document.getElementById("logoutLogin");
+
+
+verificarDados();
 
 var carros = [];
 
-idImg.addEventListener('click', function () {
-    window.location.pathname = "/locacao_veiculos/paginas/detalhes.html";
+
+id_perfil.addEventListener('click', function () {
+    if (JSON.parse(sessionStorage.getItem("user")) == null) {
+        Swal.fire({
+            position: "top-end",
+            icon: "warning",
+            title: "Para acessar o perfil, faça o login!",
+            showConfirmButton: false,
+            timer: 1500
+        });
+    } else {
+
+        window.location = "conta.html";
+    }
 })
 
-
-
-idCompra.addEventListener('click', function () {
-    console.log('COMPRAR')
-});
-
-idAluga.addEventListener('click', function () {
-    console.log('ALUGAR')
-})
-
-idAjuda.addEventListener('click', function () {
-    console.log('AJUDA')
-})
-
-idServicos.addEventListener('click', function () {
-    console.log('SERVICOS')
+logoutLogin.addEventListener('click', function () {
+    sessionStorage.clear();
+    window.location = "loginCadastro.html";
 })
 
 const root = document.documentElement;
 
 
 async function chamar() {
-
     // Chamar a API para cadastrar o usuário
     await fetch("http://localhost:8080/cars").then(response => {
         if (response.ok) {
@@ -63,13 +63,9 @@ var listaDivs = document.getElementById("container");
 
 
 async function setarDados(dados) {
-    // console.log("Chamou setar dados");
-    console.log(dados);
     sessionStorage.setItem("carro", JSON.stringify(dados));
-
     window.location = "detalhes.html";
 }
-
 
 
 function criaCards(dados) {
@@ -98,7 +94,7 @@ function criaCards(dados) {
         title.innerHTML = dado.nome;
         description.innerText = dado.descricao;
         price.innerText = "R$ " + dado.vehicle_price
-        divCard.onclick = function () {setarDados(dado)};
+        divCard.onclick = function () { setarDados(dado) };
 
 
 
@@ -113,6 +109,12 @@ function criaCards(dados) {
 
 
     });
+}
+
+async function verificarDados() {
+    if (JSON.parse(sessionStorage.getItem("user")) == null) {
+        logoutLogin.innerText = "Login"
+    }
 }
 
 

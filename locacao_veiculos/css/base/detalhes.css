@@ -207,3 +207,8 @@
     width: 800px;
     height: 800px;
 }
+
+.detailsCar{
+    font-weight: bolder;
+    margin: 5px;
+}

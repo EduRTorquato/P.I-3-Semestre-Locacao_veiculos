@@ -13,7 +13,7 @@
 <body class="background">
 
     <!-- NAVBAR  -->
-    <nav>
+    <nav style="display: flex; justify-content: space-around;">
         <div class="logo">
 
             <img id="imgLogo" src="../img/logos/katchauRed.png" alt="">
@@ -21,15 +21,15 @@
         </div>
         <div class="links">
             <ul class="nav-itens">
-                <li id="id_comprar">Comprar</li>
                 <li id="id_alugar">Alugar</li>
                 <li id="id_servicos">Serviços</li>
-                <li id="id_ajuda">Ajuda</li>
+                <li id="id_perfil">Perfil</li>
+              
             </ul>
         </div>
-        <div>
-            <a href="../paginas/loginCadastro.html">
-                <img src="../img/do-utilizador.png" id="user" alt="">
+        <div style="">
+            <a style="text-decoration: none;">
+                    <p class="logoutLogin" id="logoutLogin">Logout <i class="bi bi-door-open"></i></p>
             </a>
         </div>
     </nav>
@@ -60,13 +60,6 @@
     <!-- BUSCADOR DE VEÍCULOS -->
     <div id="finder">
         <div id="box">
-            <ul class="nav-itensBox">
-                <li style="padding-right: 70px;">Carros</li>
-                <li>Motos</li>
-            </ul>
-
-            <hr id="bar">
-
             <div id="pesquisa">
                 <input type="text" placeholder="Buscar por veículo">
                 <button>Buscar</button>
@@ -101,6 +94,7 @@
     </div>
 
     <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js"></script>
     <script src="../js/index.js"></script>
 
 </body>
@@ -135,7 +129,7 @@
 
 
 <!-- FILTRO -->
-<div class="colunaData">
+<!-- <div class="colunaData">
 
     <div class="btn-group">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -173,7 +167,7 @@
     </div>
 </div>
 
-
+ -->
 
 
 
