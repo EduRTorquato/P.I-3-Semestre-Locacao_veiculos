@@ -1,5 +1,7 @@
+getUserData();
 
 chamar();
+
 
 
 
@@ -39,6 +41,34 @@ logoutLogin.addEventListener('click', function () {
 })
 
 const root = document.documentElement;
+
+async function getUserData(){
+
+   console.log(JSON.parse(sessionStorage.getItem("user")).email);
+
+   const email = JSON.parse(sessionStorage.getItem("user")).email;
+
+    const endpointMontado = `http://localhost:8080/user/email/${email}`;
+
+    console.log(endpointMontado);
+    
+    await fetch(endpointMontado).then(response => {
+        if (response.ok) {
+           
+        }
+        return response.json();
+    }).then((data) => {
+
+        console.log(data);
+
+        sessionStorage.setItem("user", JSON.stringify(data));
+
+
+    }).catch((error) => {
+        console.error(error);
+    });
+
+}
 
 
 async function chamar() {

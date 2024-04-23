@@ -1,8 +1,8 @@
 const id_dados = document.getElementById("id_dados");
 
-const id_sair = document.getElementById("id_sair");
+const id_alugados = document.getElementById("id_alugados");
 
-const id_favoritos = document.getElementById("favoritos");
+const id_sair = document.getElementById("id_sair");
 
 
 
@@ -11,9 +11,9 @@ id_dados.addEventListener("click", function () {
     window.location = "../conta.html";
 });
 
-id_favoritos.addEventListener("click", function () {
+id_alugados.addEventListener("click", function(){
 
-    window.location = "favoritos.html";
+    window.location = "alugados.html";
 })
 
 

@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Veículos Alugados</title>
+  <title>Adicionar Veículos</title>
   <link rel="stylesheet" href="../../css/styles.css">
-  <link rel="stylesheet" href="../../css/base/fluxo-conta-usuario/carrosAlugados.css">
+  <link rel="stylesheet" href="../../css/base/fluxo-conta-admin/addcar.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="icon" href="../../img/logos/katchauRed.png">
@@ -33,9 +33,9 @@
 
     <div class="listItens">
       <ul cl>
-        <li id="id_alugados" class="linkList"> <i class="bi bi-taxi-front"></i> Carros Alugados </li>
-        <li id="id_dados" class="linkList"> <i class="bi bi-person"></i> Meus Dados </li>
-        <li class="linkList"> <i class="bi bi-star"></i> Favoritos </li>
+        <li id="dados" class="linkList"> <i class="bi bi-person"></i> Meus Dados </li>
+        <li id="gestao_veiculos" style="display: block;" class="linkList"> <i class="bi bi-clipboard2-check"></i> Gestão de Veículos </li>
+        <li style="display: block;" id="adicionar_veiculos" class="linkList"> <i class="bi bi-plus-circle"></i> Adicionar Veículos </li>
         <li id="id_sair" class="linkList"> <i class="bi bi-door-open"></i> Sair </li>
 
       </ul>
@@ -50,7 +50,7 @@
     <div class="dataShow">
 
       <div class="columnData">
-        <h1 class="titleAlugados">Favoritos</h1>
+        <h1 class="titleAlugados">Adicionar Veículos</h1>
 
       </div>
     </div>
@@ -59,7 +59,7 @@
   </div>
 
 
-  <script src="../../js/fluxo-usuario.js/favoritos.js"></script>
+  <script src="../../js/fluxo-admin/addcar.js"></script>
 
   <footer class="footerBarConta">
     <hr class="redBar">
