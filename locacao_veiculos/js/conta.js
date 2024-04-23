@@ -9,7 +9,27 @@ const gestao_veiculos = document.getElementById("gestao_veiculos");
 
 const adicionar_veiculos = document.getElementById("adicionar_veiculos");
 
+const email_id = document.getElementById("email_id");
+
+const nome_id = document.getElementById("nome_id");
+
+const linkPerfil_id = document.getElementById("linkPerfil_id");
+
+
+                    
+                    //INPUTS IDS\\
+
+const nomeCompleto_id = document.getElementById("nomeCompleto_id");
+const emailDado_id = document.getElementById("emailDado_id");
+const dataNascimento_id = document.getElementById("dataNascimento_id");
+const genero_id = document.getElementById("genero_id");
+const linkPng_id = document.getElementById("linkPng_id");
+
+                      /////\\\\\\
+
 exibeBotao();
+
+setarDadosUser();
 
 
 
@@ -43,9 +63,6 @@ id_sair.addEventListener("click", function () {
 function exibeBotao() {
     const user = JSON.parse(sessionStorage.getItem("user"))
 
-    console.log("É admin?");
-    console.log(user.is_admin);
-
     if (user.is_admin == 0) {
         gestao_veiculos.style = 'display: none';
         adicionar_veiculos.style = 'display: none';
@@ -56,7 +73,25 @@ function exibeBotao() {
         id_alugados.style = 'display: none';
         id_favoritos.style = 'display: none';
     }
+}
 
+//Setar dados
+function setarDadosUser(){
 
+    const dados = JSON.parse(sessionStorage.getItem("user"));
+
+    email_id.innerText = dados.email;
+    nome_id.innerText = dados.nome;
+    linkPerfil_id.setAttribute("src", dados.foto_perfil);
+
+    nomeCompleto_id.setAttribute("value", dados.nome);
+    emailDado_id.setAttribute("value",  dados.email);
+    dataNascimento_id.setAttribute("value", dados.data_nasc);
+    genero_id.setAttribute("value", dados.genero);
+    
+    dados.foto_perfil == null ? linkPerfil_id.setAttribute("src", '../img/do-utilizador.png') : linkPng_id.setAttribute("value", dados.foto_perfil);
+    //linkPng_id.setAttribute("value", dados.foto_perfil);
+
+   console.log(dados)
 
 }
