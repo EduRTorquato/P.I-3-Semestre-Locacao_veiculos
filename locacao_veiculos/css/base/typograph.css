@@ -27,5 +27,8 @@ nav {
 
 #user {
     height: 50px;
+    border-radius: 50px;
+    width: 50px;
     cursor: pointer;
+    border: solid 2px red;
 }

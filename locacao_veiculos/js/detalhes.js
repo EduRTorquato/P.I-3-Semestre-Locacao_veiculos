@@ -1,13 +1,23 @@
 
+const idAluga = document.getElementById('id_alugar');
 
+const idServicos = document.getElementById('id_servicos');
+
+const id_perfil = document.getElementById('id_perfil');
+
+const logoutLogin = document.getElementById("logoutLogin");
+
+const user = document.getElementById("user");
+
+getUserPic();
 
 
 
 const buttonConfirm = document.getElementById("confirmInterest");
 
-const nome = document.getElementById("nomeId");
-const email = document.getElementById("emailId");
-const telefone = document.getElementById("telId");
+const dataInicio_id = document.getElementById("dataInicio_id");
+const dataFinal_id = document.getElementById("dataFinal_id");
+const motivo_id = document.getElementById("motivo_id");
 const mensagem = document.getElementById("messageId");
 
 // ITENS DETALHE
@@ -84,9 +94,19 @@ function getCar() {
 }
 
 
+function getUserPic(){
+    const userData = JSON.parse(sessionStorage.getItem("user"));
+
+    user.setAttribute("src", userData.foto_perfil);
+
+    userData.foto_perfil == null ? user.setAttribute("src", '../img/do-utilizador.png') : user.setAttribute("value", userData.foto_perfil);
+    console.log(user);
+}
+
+
 buttonConfirm.addEventListener("click", function () {
 
-    if (nome.value == '' || email.value == '' || telefone.value == '') {
+    if (dataInicio_id.value == '' || dataFinal_id.value == '' || motivo_id.value == '') {
         Swal.fire({
             position: "top-end",
             icon: "warning",
@@ -103,12 +123,35 @@ buttonConfirm.addEventListener("click", function () {
             timer: 1500
         });
 
-        console.log(nome.value);
-        console.log(email.value);
+        console.log(dataInicio_id.value);
+        console.log(dataFinal_id.value);
         console.log(mensagem.value);
-        console.log(telefone.value);
+        console.log(motivo_id.value);
+
+        const dados = {
+            dataInicio: dataInicio_id.value,
+            dataFinal: dataFinal_id.value,
+            motivo: motivo_id.value,
+            message: mensagem.value
+        }
+
+        console.log(dados);
+
     }
 
-
-
 });
+
+id_perfil.addEventListener('click', function () {
+    if (JSON.parse(sessionStorage.getItem("user")) == null) {
+        Swal.fire({
+            position: "top-end",
+            icon: "warning",
+            title: "Para acessar o perfil, faça o login!",
+            showConfirmButton: false,
+            timer: 1500
+        });
+    } else {
+
+        window.location = "conta.html";
+    }
+})

@@ -1,0 +1,80 @@
+.titleAlugados{
+    color: var(--corBase);
+    font-weight: bolder;
+    margin-right: 800px;
+    margin: 20px;
+}
+
+.pedidos{
+    border: solid 3px rgb(197, 197, 197);
+    border-radius: 10px;
+    width: 1000px;
+    height: 50px;
+    margin-left: 120px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.nomePedido{
+    margin-left: 100px;
+    font-weight: bolder;
+    color: gray;
+    margin-top: 10px;
+}
+
+.nomeCarroPedido{
+    margin-left: 80px;
+    margin-top: 10px;
+    font-weight: bolder;
+
+}
+
+
+.buttonIcons
+{
+    margin-top: 5px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconAccept{
+    font-size: 26px;
+    margin-left: 20px;
+    color: rgb(127, 180, 48);
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+.iconRecuse{
+    font-size: 26px;
+    margin-left: 50px;
+    color: red;
+    cursor: pointer;
+ 
+}
+
+.iconAccept:hover{
+    color: rgb(87, 118, 40);;
+}
+
+.iconRecuse:hover{
+
+    color: rgb(219, 63, 63);
+ 
+}
+
+
+.informationsRented{
+
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 50px;
+    width: 1200px;
+    height: 600px;
+    position: fixed;
+    top: 8%;
+    right: 10%;
+    flex-wrap: wrap;
+    overflow:auto;
+}

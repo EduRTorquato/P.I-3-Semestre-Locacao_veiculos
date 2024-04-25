@@ -65,7 +65,7 @@
 
           <div class="mb-3 col-md-12">
             <label for="formGroupExampleInput" class="form-label">Data de Nascimento</label>
-            <input type="text" class="form-control" id="dataNascimento_id" placeholder="30/04/2000">
+            <input type="date" class="form-control" id="dataNascimento_id" placeholder="30/04/2000">
           </div>
 
 
@@ -94,33 +94,58 @@
         <form class="row g-2">
           <div class="col-md-4">
             <label for="inputZip" class="form-label">CEP</label>
-            <input type="text" class="form-control" id="inputZip" placeholder="00000-000">
+            <input type="text" class="form-control" id="cep_id" placeholder="00000-000">
           </div>
           <div class="col-md-8">
             <label for="inputPassword4" class="form-label">Endereço</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Ex: Rua das Andorinhas">
+            <input type="text" class="form-control" id="endereco_id" placeholder="Ex: Rua das Andorinhas">
           </div>
           <div class="col-8">
             <label for="inputZip" class="form-label">Complemento</label>
-            <input type="text" class="form-control" id="inputZip" placeholder="Ex: Próximo a venda">
+            <input type="text" class="form-control" id="complemento_id" placeholder="Ex: Próximo a venda">
           </div>
           <div class="col-4">
             <label for="inputAddress2" class="form-label">Número</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="">
+            <input type="text" class="form-control" id="numero_id" placeholder="">
           </div>
           <div class="col-md-4">
             <label for="inputCity" class="form-label">Cidade</label>
-            <input type="text" class="form-control" id="inputCity">
+            <input type="text" class="form-control" id="cidade_id">
           </div>
           <div class="col-md-4">
             <label for="inputState" class="form-label">Estado</label>
             <select id="inputState" class="form-select">
-              <option selected>Choose...</option>
-              <option>...</option>
+              <Option>Acre</Option>
+              <Option>Alagoas</Option>
+              <Option>Amapá</Option>
+              <Option>Amazonas</Option>
+              <Option>Bahia</Option>
+              <Option>Ceará</Option>
+              <Option>Distrito Federal</Option>
+              <Option>Espírito Santo</Option>
+              <Option>Goiás</Option>
+              <Option>Maranhão</Option>
+              <Option>Mato Grosso</Option>
+              <Option>Mato Grosso do Sul</Option>
+              <Option>Minas Gerais</Option>
+              <Option>Pará</Option>
+              <Option>Paraíba</Option>
+              <Option>Paraná</Option>
+              <Option>Pernambuco</Option>
+              <Option>Piauí</Option>
+              <Option>Rio de Janeiro</Option>
+              <Option>Rio Grande do Norte</Option>
+              <Option>Rio Grande do Sul</Option>
+              <Option>Rondônia</Option>
+              <Option>Roraima</Option>
+              <Option>Santa Catarina</Option>
+              <Option>São Paulo</Option>
+              <Option>Sergipe</Option>
+              <Option>Tocantins</Option>
             </select>
           </div>
           <div class="col-12">
-            <button type="button" class="btn-lg saveData" id="confirmInterest">Salvar Dados</button>
+            <button type="button" class="btn-lg saveData" id="saveData">Salvar Dados</button>
           </div>
         </form>
 
@@ -139,6 +164,7 @@
   </footer>
 
   <script src="../js/conta.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>
