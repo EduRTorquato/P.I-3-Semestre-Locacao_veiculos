@@ -1,13 +1,10 @@
 
 const id_alugados = document.getElementById("id_alugados");
-
 const id_sair = document.getElementById("id_sair");
-
 const id_favoritos = document.getElementById("id_favoritos");
-
 const gestao_veiculos = document.getElementById("gestao_veiculos");
-
 const adicionar_veiculos = document.getElementById("adicionar_veiculos");
+const home = document.getElementById("home");
 
 //BOTÃO SAVE DATA\\
 const saveData = document.getElementById("saveData");
@@ -51,6 +48,11 @@ id_alugados.addEventListener('click', function () {
 id_favoritos.addEventListener("click", function () {
     window.location = "fluxo-conta-usuario/favoritos.html";
 })
+
+home.addEventListener("click", function () {
+    window.location = "home.html";
+})
+
 
 
 // FLUXO DE ADMIN 
