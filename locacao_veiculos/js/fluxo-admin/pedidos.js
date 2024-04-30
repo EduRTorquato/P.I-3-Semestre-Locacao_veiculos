@@ -50,6 +50,8 @@ async function getPedidos() {
         return response.json();
     }).then((data) => {
 
+        console.log(data)
+
         alugueis = data;
         criaDados(transformarEmObjetos(alugueis));
 
@@ -74,7 +76,8 @@ function transformarEmObjetos(array) {
             preco: item[3],
             dataInicio: item[4],
             dataDevolucao: item[5],
-            linkPng: item[6]
+            linkPng: item[6],
+            is_approved: item[7]
         };
 
         // Adiciona o objeto ao array de objetos
@@ -87,48 +90,56 @@ function transformarEmObjetos(array) {
 var listaPedidos = document.getElementById("infos");
 
 function criaDados(dados) {
+
     dados.forEach(function (dado) {
-        var divPedido = document.createElement("div"); // Cria uma nova div
-        var nomePessoa = document.createElement("p"); //Cria a div de imagem
-        var nomeCarro = document.createElement("p"); //Cria a div para abranger os textos
-        var dataCarro = document.createElement("p"); //Cria a div para abranger os textos
 
-        var botoes = document.createElement("div");
-        var dataCarro = document.createElement("i"); 
-        var buttonYes = document.createElement("i");
-        var buttonNo = document.createElement("i");
-        
-        //APPEND BY textCard
+        if (dado.is_approved == 0) {
 
-        divPedido.classList.add("pedidos"); // Adiciona a classe CSS para estilizar a div
-        nomePessoa.classList.add("nomeCarroPedido");
-        nomeCarro.classList.add("nomeCarroPedido");
-        dataCarro.classList.add("nomeCarroPedido");
-        botoes.classList.add("buttonIcons");
-        buttonYes.classList.add("bi-check-circle");
-        buttonNo.classList.add("bi-x-circle");
-        buttonYes.classList.add("iconAccept");
-        buttonNo.classList.add("iconRecuse");
+            var divPedido = document.createElement("div"); // Cria uma nova div
+            var nomePessoa = document.createElement("p"); //Cria a div de imagem
+            var nomeCarro = document.createElement("p"); //Cria a div para abranger os textos
+            var dataCarro = document.createElement("p"); //Cria a div para abranger os textos
 
+            var botoes = document.createElement("div");
+            var dataCarro = document.createElement("i");
+            var buttonYes = document.createElement("i");
+            var buttonNo = document.createElement("i");
 
-        console.log(dado);
+            //APPEND BY textCard
 
-        nomePessoa.innerText = dado.nome;
-        nomeCarro.innerText = dado.carro;
-        dataCarro.innerText = dado.dataInicio + " - " + dado.dataDevolucao;
+            divPedido.classList.add("pedidos"); // Adiciona a classe CSS para estilizar a div
+            nomePessoa.classList.add("nomeCarroPedido");
+            nomeCarro.classList.add("nomeCarroPedido");
+            dataCarro.classList.add("nomeCarroPedido");
+            botoes.classList.add("buttonIcons");
+            buttonYes.classList.add("bi-check-circle");
+            buttonNo.classList.add("bi-x-circle");
+            buttonYes.classList.add("iconAccept");
+            buttonNo.classList.add("iconRecuse");
 
 
 
+            nomePessoa.innerText = dado.nome;
+            nomeCarro.innerText = dado.carro;
+            dataCarro.innerText = dado.dataInicio + " - " + dado.dataDevolucao;
 
-        listaPedidos.appendChild(divPedido); // Monta o HTML 
-        divPedido.appendChild(nomePessoa);
-        divPedido.appendChild(nomeCarro);
-        divPedido.appendChild(dataCarro);
-        divPedido.appendChild(botoes);
-        botoes.appendChild(buttonYes);
-        botoes.appendChild(buttonNo);
+            buttonYes.onclick = function () { getAluguelData(dado.id) };
+            buttonNo.onclick = function () { getAluguelData(dado.id) }
 
 
+
+
+
+            listaPedidos.appendChild(divPedido); // Monta o HTML 
+            divPedido.appendChild(nomePessoa);
+            divPedido.appendChild(nomeCarro);
+            divPedido.appendChild(dataCarro);
+            divPedido.appendChild(botoes);
+            botoes.appendChild(buttonYes);
+            botoes.appendChild(buttonNo);
+
+
+        }
     });
 }
 
@@ -147,8 +158,6 @@ async function getUserData() {
         return response.json();
     }).then((data) => {
 
-        console.log(data);
-
         sessionStorage.setItem("user", JSON.stringify(data));
 
 
@@ -164,4 +173,65 @@ function setarDadosUser() {
     email_id.innerText = dados.email;
     nome_id.innerText = dados.nome;
     linkPerfil_id.setAttribute("src", dados.foto_perfil);
+}
+
+
+//Conseguir dados do aluguel para alterá-los
+async function getAluguelData(id) {
+
+    const endpointMontado = `http://localhost:8080/aluguel/${id}`;
+
+
+    await fetch(endpointMontado).then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+
+    }).then((data) => {
+
+        console.log(data);
+
+        aprovarDados(data);
+
+        // sessionStorage.setItem("user", JSON.stringify(data));
+
+
+    }).catch((error) => {
+        console.error(error);
+    });
+
+}
+
+
+async function aprovarDados(dados) {
+
+    dados.is_approved = 1;
+
+    console.log(dados);
+
+    // Chamar a API para cadastrar o usuário
+    await fetch("http://localhost:8080/aluguel", {
+        method: "PUT",
+        body: JSON.stringify(dados),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }).then(response => {
+        if (!response.ok) {
+            throw new Error("Algo deu errado");
+        } else {
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Dados alterados!",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }
+        // return response.json();
+    }).catch((error) => {
+        console.error(error);
+        console.error("Tá errado hein");
+    });
+
 }

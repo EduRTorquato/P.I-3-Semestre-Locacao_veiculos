@@ -97,14 +97,25 @@ function getCar() {
 function getUserPic(){
     const userData = JSON.parse(sessionStorage.getItem("user"));
 
-    user.setAttribute("src", userData.foto_perfil);
+    console.log(userData);
 
-    userData.foto_perfil == null ? user.setAttribute("src", '../img/do-utilizador.png') : user.setAttribute("value", userData.foto_perfil);
+
+    if(userData){
+        user.setAttribute("src", userData.foto_perfil);
+        userData.foto_perfil == null ? user.setAttribute("src", '../img/do-utilizador.png') : user.setAttribute("value", userData.foto_perfil);
+    }else{
+        console.log("Teste")
+    }
+
     console.log(user);
 }
 
 
 buttonConfirm.addEventListener("click", function () {
+
+    const userData = JSON.parse(sessionStorage.getItem("user"));
+    var carro = JSON.parse(sessionStorage.getItem("carro"));
+
 
     if (dataInicio_id.value == '' || dataFinal_id.value == '' || motivo_id.value == '') {
         Swal.fire({
@@ -115,27 +126,49 @@ buttonConfirm.addEventListener("click", function () {
             timer: 1500
         });
     } else {
-        Swal.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Interesse Confirmado!",
-            showConfirmButton: false,
-            timer: 1500
-        });
 
-        console.log(dataInicio_id.value);
-        console.log(dataFinal_id.value);
-        console.log(mensagem.value);
-        console.log(motivo_id.value);
-
-        const dados = {
-            dataInicio: dataInicio_id.value,
-            dataFinal: dataFinal_id.value,
+        const objetoInteresse = {
             motivo: motivo_id.value,
-            message: mensagem.value
+            observacao: mensagem.value,
+            carro_id: carro.id,
+            user_id: userData.id,
+            data_inicio: dataInicio_id.value,
+            data_devolucao: dataFinal_id.value,
+            is_approved: 0
         }
 
-        console.log(dados);
+        console.log(objetoInteresse);
+        
+     fetch("http://localhost:8080/aluguel", {
+            method: "POST",
+            body: JSON.stringify(objetoInteresse),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error("Email ou senha incorretos");
+            } else {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Interesse confirmado!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+
+            }
+            return response.json();
+        }).catch((error) => {
+            console.error(error);
+            Swal.fire({
+                position: "top-end",
+                icon: "warning",
+                title: "Esse email já existe!",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        });
 
     }
 
