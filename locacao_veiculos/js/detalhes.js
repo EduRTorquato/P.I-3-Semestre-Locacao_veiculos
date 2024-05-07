@@ -116,16 +116,29 @@ buttonConfirm.addEventListener("click", function () {
     const userData = JSON.parse(sessionStorage.getItem("user"));
     var carro = JSON.parse(sessionStorage.getItem("carro"));
 
+   
 
-    if (dataInicio_id.value == '' || dataFinal_id.value == '' || motivo_id.value == '') {
+    
+
+
+    if (JSON.parse(sessionStorage.getItem("user")) == null) {
         Swal.fire({
             position: "top-end",
             icon: "warning",
-            title: "Preencha os campos necessários!",
+            title: "Faça o login para confirmar interesse.",
             showConfirmButton: false,
             timer: 1500
         });
-    } else {
+    } else if( dataInicio_id.value == '' || dataFinal_id.value == '' || motivo_id.value == '' ){
+        Swal.fire({
+            position: "top-end",
+            icon: "warning",
+            title: "Preencha os campos necessários para demonstrar interesse.",
+            showConfirmButton: false,
+            timer: 1500
+        });
+
+    }else {
 
         const objetoInteresse = {
             motivo: motivo_id.value,

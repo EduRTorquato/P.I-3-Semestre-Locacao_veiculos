@@ -22,7 +22,7 @@
     <div class="infoProfile">
       <img class="imgPerfil" id="linkPerfil_id" src="../../img/do-utilizador.png" alt="">
 
-      <h2 id="nome_id">Cristiano Rolaldo</h2>
+      <h2 id="nome_id">Nome Nome</h2>
       <p class="emailInfo test" id="email_id">email@ronaldo.com</p>
 
       <div style="display: flex; justify-content: center; margin-top: 2px;">
@@ -35,8 +35,10 @@
       <ul cl>
         <li class="linkList" id="home"> <i class="bi bi-house"></i> Home </li>
         <li id="dados" class="linkList"> <i class="bi bi-person"></i> Meus Dados </li>
-        <li id="gestao_veiculos" style="display: block;" class="linkList"> <i class="bi bi-clipboard2-check"></i> Gestão de Veículos </li>
-        <li style="display: block;" id="adicionar_veiculos" class="linkList"> <i class="bi bi-plus-circle"></i> Adicionar Veículos </li>
+        <li id="gestao_veiculos" style="display: block;" class="linkList"> <i class="bi bi-clipboard2-check"></i> Gestão
+          de Veículos </li>
+        <li style="display: block;" id="adicionar_veiculos" class="linkList"> <i class="bi bi-plus-circle"></i>
+          Adicionar Veículos </li>
         <li id="id_sair" class="linkList"> <i class="bi bi-door-open"></i> Sair </li>
 
       </ul>
@@ -48,12 +50,161 @@
 
   <div class="informations">
 
-    <div class="dataShow">
+    <div class="formAddCar">
 
       <div class="columnData">
         <h1 class="titleAlugados">Adicionar Veículos</h1>
-
       </div>
+
+      <form class="row">
+        <div class="col-md-4">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nome">
+        </div>
+        <div class="col-md-4">
+          <label for="inputPassword4" class="form-label">Ano</label>
+          <input type="number" class="form-control" id="ano">
+        </div>
+        <div class="col-4">
+          <label for="inputAddress" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="cidade" placeholder="Cidade">
+        </div>
+        <div class="col-4">
+          <label for="inputAddress2" class="form-label">Km</label>
+          <input type="text" class="form-control" id="km" placeholder="Kilometragem">
+        </div>
+
+        <div class="col-4">
+          <label for="inputAddress" class="form-label">Foto do Veículo (Link)</label>
+          <input type="text" class="form-control" id="vehicle_photo" placeholder="Link do PNG">
+        </div>
+
+        <div class="col-4">
+          <label for="inputAddress" class="form-label">Câmbio</label>
+          <input type="text" class="form-control" id="cambio" placeholder="Manual ou Automático">
+        </div>
+
+        <div class="col-4">
+          <label for="inputAddress" class="form-label">Carroceria</label>
+          <input type="text" class="form-control" id="carroceria" placeholder="Carroceria">
+        </div>
+
+        <div class="col-4">
+          <label for="inputAddress" class="form-label">Cor</label>
+          <input type="text" class="form-control" id="cor" placeholder="Cor do veículo">
+        </div>
+
+        <div class="col-4">
+          <label for="inputAddress" class="form-label">Final da Placa</label>
+          <input type="text" class="form-control" id="final_placa" placeholder="000">
+        </div>
+
+        <div class="col-4">
+          <label for="inputAddress" class="form-label">Aceito Troca?</label>
+          <input type="text" class="form-control" id="aceito_troca" placeholder="">
+        </div>
+
+        <div class="col-md-8">
+          <label for="inputCity" class="form-label">Preço</label>
+          <input type="text" class="form-control" id="preco">
+        </div>
+
+        <div class="col-4">
+          <label for="inputAddress" class="form-label">Foto do veículo</label>
+          <input type="text" class="form-control" id="foto1" placeholder="Foto para a apresentação">
+        </div>
+
+        <div class="col-4">
+          <label for="inputAddress" class="form-label">Foto do veículo (2)</label>
+          <input type="text" class="form-control" id="foto2" placeholder="Foto para a apresentação">
+        </div>
+
+        <div class="col-4">
+          <label for="inputAddress" class="form-label">Foto do veíuclo (3)</label>
+          <input type="text" class="form-control" id="foto3" placeholder="Foto para a apresentação">
+        </div>
+
+        <div class="col-4">
+          <div class="form-check row-cols-lg-3 pt-5">
+            <input class="form-check-input" type="checkbox" id="alarme">
+            <label class="form-check-label" for="gridCheck">
+              Alarme  
+            </label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-check row-cols-lg-3 pt-5">
+            <input class="form-check-input" type="checkbox" id="travas">
+            <label class="form-check-label" for="gridCheck">
+              Travas
+            </label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-check row-cols-lg-3 pt-5">
+            <input class="form-check-input" type="checkbox" id="freioabs">
+            <label class="form-check-label" for="gridCheck">
+              Freio ABS
+            </label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="form-check row-cols-lg-3 pt-5">
+            <input class="form-check-input" type="checkbox" id="computador">
+            <label class="form-check-label" for="gridCheck">
+              Computador a bordo
+            </label>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="form-check row-cols-lg-3 pt-5">
+            <input class="form-check-input" type="checkbox" id="arcondicionado">
+            <label class="form-check-label" for="gridCheck">
+              Ar Condicionado
+            </label>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="form-check row-cols-lg-3 pt-5">
+            <input class="form-check-input" type="checkbox" id="sensor">
+            <label class="form-check-label" for="gridCheck">
+              Sensor de Estacionamento
+            </label>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="form-check row-cols-lg-3 pt-5">
+            <input class="form-check-input" type="checkbox" id="desembacador">
+            <label class="form-check-label" for="gridCheck">
+              Desembaçador
+            </label>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="form-check row-cols-lg-3 pt-5">
+            <input class="form-check-input" type="checkbox" id="controle">
+            <label class="form-check-label" for="gridCheck">
+              Controle de tração
+            </label>
+          </div>
+        </div>
+        
+
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+          <textarea class="form-control" id="descricao" rows="3" style="resize: none;"></textarea>
+      </div>
+
+      <div class="colbutton">
+        <button type="button" class="btn-md addbutton" id="addVehicle">Adicionar Veículo</button>
+      </div>
+
+      </form>
+
     </div>
 
 
@@ -61,6 +212,7 @@
 
 
   <script src="../../js/fluxo-admin/addcar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js"></script>
 
   <footer class="footerBarConta">
     <hr class="redBar">

@@ -210,8 +210,8 @@ footer {
 }
 
 .logoFooter{
-    width: 60px;
-    top: 75%;
+    width: 200px;
+    top: 50%;
     position: absolute;
     left: 50%;
 }
