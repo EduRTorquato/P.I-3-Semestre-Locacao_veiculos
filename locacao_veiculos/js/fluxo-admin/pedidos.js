@@ -93,7 +93,7 @@ function criaDados(dados) {
 
     dados.forEach(function (dado) {
 
-        if (dado.is_approved == 0) {
+        if (dado.is_approved == 2) {
 
             var divPedido = document.createElement("div"); // Cria uma nova div
             var nomePessoa = document.createElement("p"); //Cria a div de imagem
@@ -124,7 +124,7 @@ function criaDados(dados) {
             dataCarro.innerText = dado.dataInicio + " - " + dado.dataDevolucao;
 
             buttonYes.onclick = function () { getAluguelData(dado.id) };
-            buttonNo.onclick = function () { getAluguelData(dado.id) }
+            buttonNo.onclick = function () { getAluguelDataNegar(dado.id) }
 
 
 
@@ -202,10 +202,117 @@ async function getAluguelData(id) {
 
 }
 
+async function getAluguelData(id) {
+
+    const endpointMontado = `http://localhost:8080/aluguel/${id}`;
+
+
+    await fetch(endpointMontado).then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+
+    }).then((data) => {
+
+        console.log(data);
+
+        aprovarDados(data);
+
+        // sessionStorage.setItem("user", JSON.stringify(data));
+
+
+    }).catch((error) => {
+        console.error(error);
+    });
+
+}
+async function getAluguelData(id) {
+
+    const endpointMontado = `http://localhost:8080/aluguel/${id}`;
+
+
+    await fetch(endpointMontado).then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+
+    }).then((data) => {
+
+        console.log(data);
+
+        aprovarDados(data);
+
+        // sessionStorage.setItem("user", JSON.stringify(data));
+
+
+    }).catch((error) => {
+        console.error(error);
+    });
+
+}
+async function getAluguelDataNegar(id) {
+
+    const endpointMontado = `http://localhost:8080/aluguel/${id}`;
+
+
+    await fetch(endpointMontado).then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+
+    }).then((data) => {
+
+        console.log(data);
+
+        negarDados(data);
+
+        // sessionStorage.setItem("user", JSON.stringify(data));
+
+
+    }).catch((error) => {
+        console.error(error);
+    });
+
+}
+
+
 
 async function aprovarDados(dados) {
 
     dados.is_approved = 1;
+
+    console.log(dados);
+
+    // Chamar a API para cadastrar o usuário
+    await fetch("http://localhost:8080/aluguel", {
+        method: "PUT",
+        body: JSON.stringify(dados),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }).then(response => {
+        if (!response.ok) {
+            throw new Error("Algo deu errado");
+        } else {
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Dados alterados!",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }
+        // return response.json();
+    }).catch((error) => {
+        console.error(error);
+        console.error("Tá errado hein");
+    });
+
+}
+
+async function negarDados(dados) {
+
+    dados.is_approved = 0;
 
     console.log(dados);
 

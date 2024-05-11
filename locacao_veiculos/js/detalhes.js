@@ -147,7 +147,7 @@ buttonConfirm.addEventListener("click", function () {
             user_id: userData.id,
             data_inicio: dataInicio_id.value,
             data_devolucao: dataFinal_id.value,
-            is_approved: 0
+            is_approved: 2
         }
 
         console.log(objetoInteresse);
@@ -176,8 +176,8 @@ buttonConfirm.addEventListener("click", function () {
             console.error(error);
             Swal.fire({
                 position: "top-end",
-                icon: "warning",
-                title: "Esse email já existe!",
+                icon: "success",
+                title: "Interesse demonstrado.",
                 showConfirmButton: false,
                 timer: 1500
             });
