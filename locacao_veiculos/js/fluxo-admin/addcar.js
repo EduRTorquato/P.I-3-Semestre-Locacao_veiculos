@@ -172,7 +172,7 @@ addVehicle.addEventListener("click", function () {
         },
     }).then(response => {
         if (!response.ok) {
-            throw new Error("Email ou senha incorretos");
+            throw new Error("Não foi possível");
         } else {
             Swal.fire({
                 position: "top-end",
@@ -182,8 +182,7 @@ addVehicle.addEventListener("click", function () {
                 timer: 1500
             });
 
-            document.getElementById("reg-log").checked = false;
-
+           
         }
         return response.json();
     }).catch((error) => {
