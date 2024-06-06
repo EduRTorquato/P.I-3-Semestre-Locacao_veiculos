@@ -14,6 +14,9 @@ const id_perfil = document.getElementById('id_perfil');
 
 const logoutLogin = document.getElementById("logoutLogin");
 
+const no_vehicle = document.getElementById("no_vehicle");
+
+
 
 verificarDados();
 
@@ -79,6 +82,12 @@ async function chamar() {
         }
         return response.json();
     }).then((data) => {
+
+        console.log(data);
+
+        if(data.length == 0){
+            no_vehicle.innerText = "Aguarde, estamos adicionando novos veículos!";
+        }
 
         carros = data;
         criaCards(carros);

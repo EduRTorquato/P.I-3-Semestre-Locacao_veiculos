@@ -84,8 +84,8 @@
 }
 
 .centeredLine{
-  margin: 30px;
-  height: 500px;
+  margin: 50px;
+  height: 400px;
   border-left: 2px solid rgb(180, 177, 177);
 
 }
@@ -102,12 +102,11 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   height: 500px;
-  position: ab;
   justify-content: space-evenly;
 }
 
 .columnData {
-  margin: 20px;
+  margin: 25px;
 }
 
 .saveData {
@@ -118,7 +117,7 @@
   border-radius: 25px;
   border-style: none;
   width: 200px;
-  margin-top: 100px;
+  margin-top: 150px;
   margin-left: 490px;
   transition-duration: 0.2s;
 }
@@ -131,8 +130,27 @@
   margin-right: 50px;
   margin-left: 50px;
 }
+
 .titles{
+  font-size: 50px;
   font-weight: 750;
   color: var(--corBase);
-  margin: 30px;
+  margin: 25px;
+  margin-left: 70px;
+}
+
+.logoProfile{
+  width: 200px;
+  top: 10%;
+  position: absolute;
+  left: 45%;
+}
+
+.informacoesAddcar {
+  font-weight: 300;
+  margin: 10px;
+  display: flex;
+  text-align: center;
+  grid-template-columns: auto auto auto;
+  position: relative;
 }

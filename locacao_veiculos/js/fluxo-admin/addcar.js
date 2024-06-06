@@ -205,5 +205,5 @@ function setarDadosUser() {
 
     email_id.innerText = dados.email;
     nome_id.innerText = dados.nome;
-    linkPerfil_id.setAttribute("src", dados.foto_perfil);
+    dados.foto_perfil == null ? linkPerfil_id.setAttribute("src", '../../img/do-utilizador.png') : linkPerfil_id.setAttribute("src", dados.foto_perfil);
 }

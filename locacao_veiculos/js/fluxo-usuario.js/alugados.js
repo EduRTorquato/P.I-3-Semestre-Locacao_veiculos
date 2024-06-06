@@ -9,6 +9,8 @@ const email_id = document.getElementById("email_id");
 const nome_id = document.getElementById("nome_id");
 const linkPerfil_id = document.getElementById("linkPerfil_id");
 
+const no_vehicles = document.getElementById("no_vehicles");
+
 getUserData();
 setarDadosUser();
 getPedidos();
@@ -79,6 +81,10 @@ async function getPedidos() {
 
         console.log(data);
 
+        if(data.length == 0){
+            no_vehicles.innerText = "Nenhum veículo alugado até o momento!";
+        }
+
         criaDados(transformarEmObjetos(data));
 
 
@@ -93,7 +99,9 @@ function setarDadosUser() {
 
     email_id.innerText = dados.email;
     nome_id.innerText = dados.nome;
-    linkPerfil_id.setAttribute("src", dados.foto_perfil);
+
+    dados.foto_perfil == null ? linkPerfil_id.setAttribute("src", '../../img/do-utilizador.png') : linkPerfil_id.setAttribute("src", dados.foto_perfil);
+
 }
 
 function transformarEmObjetos(array) {

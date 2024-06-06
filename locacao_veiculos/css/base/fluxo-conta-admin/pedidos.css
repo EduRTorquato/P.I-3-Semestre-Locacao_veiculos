@@ -1,8 +1,9 @@
-.titleAlugados{
+.titlePedidos{
     color: var(--corBase);
     font-weight: bolder;
-    margin-right: 800px;
-    margin: 20px;
+    margin: 25px;   
+    font-size: 50px;
+    margin-left: 70px;
 }
 
 .pedidos{
@@ -28,6 +29,14 @@
     font-weight: bolder;
 
 }
+.no_request{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    text-align: left;
+    color:var(--contrasteFundo);
+    font-size: 80px;
+    margin: 100px;
+}   
 
 
 .buttonIcons

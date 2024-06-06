@@ -190,10 +190,11 @@ footer {
 }
 
 .informacoes {
+    font-weight: 300;
     display: flex;
     text-align: center;
-    grid-template-columns: auto auto auto auto;
-    height: 200px;
+    grid-template-columns: auto auto auto;
+    height: 225px;
     position: relative;
 }
 
@@ -213,7 +214,19 @@ footer {
     width: 200px;
     top: 50%;
     position: absolute;
-    left: 50%;
+    left: 44%;
+}
+
+.texto_veiculos{
+    font-weight: bolder;
+    font-size: 80px;
+}
+
+.blueBar{
+    background-color: var(--contrasteFundo);
+    height: 20px;
+    border-style: none;
+    margin: 0;
 }
 
 

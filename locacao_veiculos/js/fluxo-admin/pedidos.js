@@ -6,6 +6,9 @@ const dados = document.getElementById("dados");
 const adicionar_veiculos = document.getElementById("adicionar_veiculos");
 const home = document.getElementById("home");
 
+
+const no_request = document.getElementById("no_request");
+
 //DADOS PERFIL\\
 const email_id = document.getElementById("email_id");
 const nome_id = document.getElementById("nome_id");
@@ -50,7 +53,11 @@ async function getPedidos() {
         return response.json();
     }).then((data) => {
 
-        console.log(data)
+        
+        if(data.length == 0){
+            no_request.innerText="Nenhum pedido solicitado!";
+        }   
+
 
         alugueis = data;
         criaDados(transformarEmObjetos(alugueis));
@@ -172,7 +179,8 @@ function setarDadosUser() {
 
     email_id.innerText = dados.email;
     nome_id.innerText = dados.nome;
-    linkPerfil_id.setAttribute("src", dados.foto_perfil);
+    dados.foto_perfil == null ? linkPerfil_id.setAttribute("src", '../../img/do-utilizador.png') : linkPerfil_id.setAttribute("src", dados.foto_perfil);
+
 }
 
 

@@ -1,8 +1,19 @@
 .titleAlugados {
     color: var(--corBase);
-    margin-right: 600px;
+    font-size: 50px;
     font-weight: bolder;
-    margin: 20px;
+    text-align: left;
+    margin: 25px;
+}
+
+.no_vehicles{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    text-align: left;
+    color:var(--contrasteFundo);
+    font-size: 70px;
+    margin: 80px;
+    margin-right: 200px;
 }
 
 .cardAlugado{
