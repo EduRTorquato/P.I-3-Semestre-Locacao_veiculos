@@ -38,6 +38,7 @@ formCadastro.addEventListener("click", async (event) => {
             },
         }).then(response => {
             if (!response.ok) {
+                console.log("email ou senha aaaaaaaaaa")
                 throw new Error("Email ou senha incorretos");
             } else {
                 Swal.fire({
@@ -96,7 +97,7 @@ formLogin.addEventListener("click", (event) => {
 
     } else {
         // Chamar a API para fazer login
-        fetch("http://localhost:8080/user/login", {
+        fetch("http://localhost:8080/usuarios/login", {
             method: "POST",
             body: JSON.stringify(usuario),
             headers: {
@@ -104,7 +105,7 @@ formLogin.addEventListener("click", (event) => {
             },
         })
             .then(response => {
-                if (!response.ok) {
+                if (!response.headers) {
                     throw new Error("Email ou senha incorretos");
                 }
                 return response.json();

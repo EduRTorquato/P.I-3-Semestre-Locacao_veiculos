@@ -89,8 +89,8 @@ async function chamar() {
             no_vehicle.innerText = "Aguarde, estamos adicionando novos veículos!";
         }
 
-        carros = data;
-        criaCards(carros);
+     //   carros = data;
+      //  criaCards(carros);
 
 
     }).catch((error) => {
